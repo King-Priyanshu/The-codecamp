@@ -1,0 +1,1104 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page with Header, Footer, Sidebar, and Content</title>
+  <link rel="stylesheet" href="{% static "lololocss.css" %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'logo.png' %}" alt="cuming soon" height="90" width="180">
+        <div class="head">JAVA</div>
+
+    </header>
+
+
+
+
+    <div class="heading">
+
+        <div style="margin-left: 20%;cursor: pointer;  text-decoration: underline;" id="toggle-sidebar">Java tutorials</div>
+        <script>
+            const button = document.getElementById('toggle-sidebar');
+            button.addEventListener('click', () => {
+                document.body.classList.toggle('sidebar-visible');
+            });
+        </script>
+    </div>
+    <aside>
+        <script>
+            function scrollToSection(sectionId) {
+              document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+            </script>
+<div>Java HOME</div>
+<div class="hover-button" onclick="scrollToSection('intro')">Java Intro</div>
+<div class="hover-button" onclick="scrollToSection('getStarted')">Java Get Started</div>
+<div class="hover-button" onclick="scrollToSection('syntax')">Java Syntax</div>
+<div class="hover-button" onclick="scrollToSection('output')">Java Output</div>
+<div class="hover-button" onclick="scrollToSection('comments')">Java Comments</div>
+<div class="hover-button" onclick="scrollToSection('variables')">Java Variables</div>
+<div class="hover-button" onclick="scrollToSection('dataTypes')">Java Data Types</div>
+<div class="hover-button" onclick="scrollToSection('typeCasting')">Java Type Casting</div>
+<div class="hover-button" onclick="scrollToSection('operators')">Java Operators</div>
+<div class="hover-button" onclick="scrollToSection('strings')">Java Strings</div>
+<div class="hover-button" onclick="scrollToSection('math')">Java Math</div>
+<div class="hover-button" onclick="scrollToSection('booleans')">Java Booleans</div>
+<div class="hover-button" onclick="scrollToSection('ifElse')">Java If...Else</div>
+<div class="hover-button" onclick="scrollToSection('switch')">Java Switch</div>
+<div class="hover-button" onclick="scrollToSection('whileLoop')">Java While Loop</div>
+<div class="hover-button" onclick="scrollToSection('forLoop')">Java For Loop</div>
+<div class="hover-button" onclick="scrollToSection('breakContinue')">Java Break/Continue</div>
+<div class="hover-button" onclick="scrollToSection('arrays')">Java Arrays</div>
+
+<!-- Adding OOP Concepts -->
+<div class="hover-button" onclick="scrollToSection('oopsConcept')">Java OOP Concepts</div>
+<div class="hover-button" onclick="scrollToSection('classesObjects')">Java Classes and Objects</div>
+<div class="hover-button" onclick="scrollToSection('constructors')">Java Constructors</div>
+<div class="hover-button" onclick="scrollToSection('inheritance')">Java Inheritance</div>
+<div class="hover-button" onclick="scrollToSection('polymorphism')">Java Polymorphism</div>
+<div class="hover-button" onclick="scrollToSection('abstraction')">Java Abstraction</div>
+<div class="hover-button" onclick="scrollToSection('encapsulation')">Java Encapsulation</div>
+<div class="hover-button" onclick="scrollToSection('interfaces')">Java Interfaces</div>
+<div class="hover-button" onclick="scrollToSection('packages')">Java Packages</div>
+<div class="hover-button" onclick="scrollToSection('exceptions')">Java Exceptions</div>
+
+<!-- Adding Features -->
+<div class="hover-button" onclick="scrollToSection('multiThreading')">Java Multithreading</div>
+<div class="hover-button" onclick="scrollToSection('fileHandling')">Java File Handling</div>
+<div class="hover-button" onclick="scrollToSection('generics')">Java Generics</div>
+<div class="hover-button" onclick="scrollToSection('collections')">Java Collections</div>
+<div class="hover-button" onclick="scrollToSection('streams')">Java Streams</div>
+<div class="hover-button" onclick="scrollToSection('annotations')">Java Annotations</div>
+<div class="hover-button" onclick="scrollToSection('lambda')">Java Lambda Expressions</div>
+<div class="hover-button" onclick="scrollToSection('dateTime')">Java Date and Time</div>
+
+
+    </div>
+
+    </aside>
+
+    <div class="main-content">
+        <div class="content">
+
+            <h2 id="intro">Java Intro</h2>
+    <p >
+        Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It is intended to let developers "write once, run anywhere" (WORA), meaning that code that runs on one platform does not need to be recompiled to run on another.
+    </p>
+
+    <h2 id="getStarted">Java Get Started</h2>
+    <p >
+        To get started with Java, you need to install the Java Development Kit (JDK) and set up your development environment. You can write Java code using a simple text editor or an Integrated Development Environment (IDE) like Eclipse or IntelliJ IDEA. Here’s a basic example of a Java program:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000">
+            public class HelloWorld {
+                public static void main(String[] args) {
+                    System.out.println("Hello, World!");
+                }
+            }
+        </code>
+    </pre>
+
+    <h2 id="syntax">Java Syntax</h2>
+    <p >
+        Java syntax is the set of rules defining how a Java program is written and interpreted. Java syntax is similar to C and C++. Here’s an example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code ">
+            int a = 10;
+            int b = 20;
+            int sum = a + b;
+            System.out.println("Sum: " + sum);
+        </code>
+    </pre>
+
+    <h2 id="output">Java Output</h2>
+    <p >
+        Output in Java is often displayed using the <code>System.out.println()</code> method. This method prints text to the console. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code h">
+            System.out.println("This is Java output.");
+        </code>
+    </pre>
+
+    <h2 id="comments">Java Comments</h2>
+    <p >
+        Comments in Java are used to explain the code and are ignored by the compiler. They can be single-line or multi-line. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000">
+            // This is a single-line comment
+            /* This is a
+               multi-line comment */
+        </code>
+    </pre>
+
+    <h2 id="variables" >Java Variables</h2>
+    <p >
+        Variables in Java are containers for storing data values. Each variable must be declared with a data type. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000">
+            int age = 30;
+            String name = "John";
+        </code>
+    </pre>
+
+    <h2 id="dataTypes">Java Data Types</h2>
+    <p >
+        Java has two categories of data types: primitive and reference types. Primitive types include <code>int</code>, <code>char</code>, <code>boolean</code>, etc. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            int number = 100;
+            double decimal = 10.5;
+            boolean isTrue = true;
+        </code>
+    </pre>
+
+    <h2 id="typeCasting" >Java Type Casting</h2>
+    <p >
+        Type casting is used to convert a variable from one data type to another. There are two types: implicit and explicit. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+       <code style="color: #000;">
+    // Implicit Casting (Widening)
+    int num = 10;
+    double doubleNum = num; // int to double
+
+    // Explicit Casting (Narrowing)
+    double pi = 3.14;
+    int intPi = (int) pi; // double to int
+
+    // Example with characters
+    char letter = 'A';
+    int asciiValue = letter; // implicit casting from char to int
+
+    // Example with large to small data types
+    long largeNumber = 100000L;
+    int smallerNumber = (int) largeNumber; // explicit casting from long to int
+
+    // Example with potential data loss
+    float preciseNumber = 10.99f;
+    int roundedNumber = (int) preciseNumber; // fractional part is lost
+</code>
+
+    </pre>
+
+    <h2 id="operators">Java Operators</h2>
+    <p >
+        Operators in Java are used to perform operations on variables and values. Common operators include arithmetic, relational, and logical operators. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            int a = 5;
+            int b = 10;
+            int sum = a + b; // Arithmetic operator
+            boolean isEqual = (a == b); // Relational operator
+            boolean result = (a < b) && (b > 0); // Logical operator
+        </code>
+    </pre>
+
+    <h2 id="strings">Java Strings</h2>
+    <p >
+        Strings in Java are objects that represent a sequence of characters. You can create a string using double quotes. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            String greeting = "Hello, World!";
+            System.out.println(greeting);
+        </code>
+    </pre>
+
+    <h2 id="math" >Java Math</h2>
+    <p >
+        Java provides a <code>Math</code> class that contains methods for performing basic numeric operations such as exponentiation, logarithms, square roots, and trigonometric functions. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            double squareRoot = Math.sqrt(25); // 5.0
+            double power = Math.pow(2, 3); // 8.0
+            System.out.println("Square root: " + squareRoot);
+            System.out.println("Power: " + power);
+        </code>
+    </pre>
+
+    <h2 id="booleans">Java Booleans</h2>
+    <p >
+        Booleans in Java represent one of two values: <code>true</code> or <code>false</code>. They are used for conditional statements and logic operations. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            boolean isJavaFun = true;
+            boolean isFishTasty = false;
+            System.out.println("Is Java fun? " + isJavaFun);
+            System.out.println("Is fish tasty? " + isFishTasty);
+        </code>
+    </pre>
+
+    <h2 id="ifElse">Java If...Else</h2>
+    <p >
+        The <code>if...else</code> statement executes a block of code if its condition is true and another block if it is false. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            int number = 10;
+            if (number > 0) {
+                System.out.println("Number is positive.");
+            } else {
+                System.out.println("Number is not positive.");
+            }
+        </code>
+    </pre>
+
+    <h2 id="switch">Java Switch</h2>
+    <p >
+        The <code>switch</code> statement executes one block of code among many options based on the value of an expression. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            int day = 3;
+            switch (day) {
+                case 1:
+                    System.out.println("Monday");
+                    break;
+                case 2:
+                    System.out.println("Tuesday");
+                    break;
+                case 3:
+                    System.out.println("Wednesday");
+                    break;
+                default:
+                    System.out.println("Invalid day");
+            }
+        </code>
+    </pre>
+
+    <h2 id="whileLoop">Java While Loop</h2>
+    <p >
+        The <code>while</code> loop repeatedly executes a block of code as long as its condition is true. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            int i = 0;
+            while (i < 5) {
+                System.out.println(i);
+                i++;
+            }
+        </code>
+    </pre>
+
+    <h2 id="forLoop">Java For Loop</h2>
+    <p>
+        The <code>for</code> loop is used to iterate over a range of values. It is often used when the number of iterations is known. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            for (int j = 0; j < 5; j++) {
+                System.out.println(j);
+            }
+        </code>
+    </pre>
+
+    <h2 id="breakContinue">Java Break/Continue</h2>
+    <p >
+        The <code>break</code> statement exits from a loop or switch statement, and the <code>continue</code> statement skips the current iteration of a loop and proceeds with the next iteration. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            for (int k = 0; k < 10; k++) {
+                if (k == 5) {
+                    break; // Exits the loop when k is 5
+                }
+                if (k % 2 == 0) {
+                    continue; // Skips the rest of the loop when k is even
+                }
+                System.out.println(k);
+            }
+        </code>
+    </pre>
+
+    <h2 id="arrays">Java Arrays</h2>
+    <p >
+        Arrays in Java are used to store multiple values of the same type in a single variable. Example:
+    </p>
+    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+        <code style="color: #000;">
+            int[] numbers = {1, 2, 3, 4, 5};
+            for (int n : numbers) {
+                System.out.println(n);
+            }
+        </code>
+    </pre>
+
+    <h2 id="oopsConcept">Java OOP Concepts</h2>
+<p>
+    Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which contain data and methods to manipulate that data. The four main principles of OOP are:
+    <ul>
+        <li><strong>Encapsulation</strong>: Bundling the data (variables) and methods (functions) that operate on the data into a single unit called a class.</li>
+        <li><strong>Inheritance</strong>: Mechanism where one class can inherit fields and methods from another.</li>
+        <li><strong>Polymorphism</strong>: The ability of an object to take on many forms, typically through method overriding or overloading.</li>
+        <li><strong>Abstraction</strong>: Hiding the implementation details and showing only the essential features of the object.</li>
+    </ul>
+</p>
+
+<h2 id="classesObjects">Java Classes and Objects</h2>
+<p>
+    A <code>class</code> is a blueprint for creating objects (instances). A <code>object</code> is an instance of a class. Here’s an example:
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        class Car {
+            String model;
+            int year;
+
+            // Constructor
+            Car(String model, int year) {
+                this.model = model;
+                this.year = year;
+            }
+
+            // Method
+            void displayInfo() {
+                System.out.println("Model: " + model + ", Year: " + year);
+            }
+        }
+
+        // Create an object
+        Car car1 = new Car("Tesla Model 3", 2023);
+        car1.displayInfo();
+    </code>
+</pre>
+
+<h2 id="constructors">Java Constructors</h2>
+<p>
+    A <code>constructor</code> is a special method used to initialize objects. It is called when an object of a class is created. Java provides two types of constructors: default constructors and parameterized constructors.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        class Car {
+            String model;
+            int year;
+
+            // Default constructor
+            Car() {
+                model = "Unknown";
+                year = 0;
+            }
+
+            // Parameterized constructor
+            Car(String model, int year) {
+                this.model = model;
+                this.year = year;
+            }
+        }
+
+        // Creating objects
+        Car car1 = new Car();
+        Car car2 = new Car("Tesla", 2023);
+    </code>
+</pre>
+
+<h2 id="inheritance">Java Inheritance</h2>
+<p>
+    Inheritance allows one class to inherit fields and methods from another class. In Java, inheritance is achieved by using the <code>extends</code> keyword.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        class Animal {
+            void sound() {
+                System.out.println("Animal makes a sound");
+            }
+        }
+
+        class Dog extends Animal {
+            void sound() {
+                System.out.println("Dog barks");
+            }
+        }
+
+        Dog dog = new Dog();
+        dog.sound(); // Outputs: Dog barks
+    </code>
+</pre>
+
+<h2 id="polymorphism">Java Polymorphism</h2>
+<p>
+    Polymorphism allows a method or object to take multiple forms. In Java, it is achieved through method overriding and method overloading.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        // Method Overriding
+        class Animal {
+            void sound() {
+                System.out.println("Animal makes a sound");
+            }
+        }
+
+        class Dog extends Animal {
+            @Override
+            void sound() {
+                System.out.println("Dog barks");
+            }
+        }
+
+        Animal animal = new Dog();
+        animal.sound(); // Outputs: Dog barks
+    </code>
+</pre>
+
+<h2 id="abstraction">Java Abstraction</h2>
+<p>
+    Abstraction is the concept of hiding implementation details and showing only the essential features of the object. Java achieves abstraction through abstract classes and interfaces.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        abstract class Animal {
+            abstract void sound();
+        }
+
+        class Dog extends Animal {
+            void sound() {
+                System.out.println("Dog barks");
+            }
+        }
+
+        Animal animal = new Dog();
+        animal.sound(); // Outputs: Dog barks
+    </code>
+</pre>
+
+<h2 id="encapsulation">Java Encapsulation</h2>
+<p>
+    Encapsulation is the concept of wrapping data (variables) and code (methods) together as a single unit. It is achieved using access modifiers like <code>private</code>, <code>protected</code>, and <code>public</code>.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        class Person {
+            private String name;
+            private int age;
+
+            // Getter and Setter methods
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public int getAge() {
+                return age;
+            }
+
+            public void setAge(int age) {
+                this.age = age;
+            }
+        }
+
+        Person person = new Person();
+        person.setName("John");
+        person.setAge(30);
+        System.out.println(person.getName() + " is " + person.getAge() + " years old.");
+    </code>
+</pre>
+
+<h2 id="interfaces">Java Interfaces</h2>
+<p>
+    An <code>interface</code> in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. It is used to represent a contract for what a class can do, without specifying how.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        interface Animal {
+            void sound();
+        }
+
+        class Dog implements Animal {
+            public void sound() {
+                System.out.println("Dog barks");
+            }
+        }
+
+        Dog dog = new Dog();
+        dog.sound(); // Outputs: Dog barks
+    </code>
+</pre>
+
+<!-- You can continue adding similar content for other topics -->
+<h2 id="packages">Java Packages</h2>
+<p>
+    A <code>package</code> in Java is a namespace that groups related classes and interfaces. Packages are used to avoid name conflicts and to organize the code in a modular way. Java provides two types of packages: built-in and user-defined.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        // Importing a built-in package
+        import java.util.Scanner;
+
+        public class MyClass {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Enter your name: ");
+                String name = scanner.nextLine();
+                System.out.println("Hello, " + name);
+            }
+        }
+    </code>
+</pre>
+
+<h2 id="exceptions">Java Exceptions</h2>
+<p>
+    Exceptions are unwanted or unexpected events that disrupt the normal flow of a program. Java provides a robust mechanism for handling exceptions through <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        try {
+            int[] numbers = {1, 2, 3};
+            System.out.println(numbers[5]); // This will cause an exception
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.out.println("This block always executes.");
+        }
+    </code>
+</pre>
+
+<h2 id="multiThreading">Java Multithreading</h2>
+<p>
+    Multithreading is a process of executing multiple threads simultaneously. It allows Java programs to perform multiple tasks concurrently. Java provides the <code>Thread</code> class and the <code>Runnable</code> interface to create threads.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        class MyThread extends Thread {
+            public void run() {
+                System.out.println("Thread is running.");
+            }
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                MyThread t = new MyThread();
+                t.start(); // Start the thread
+            }
+        }
+    </code>
+</pre>
+
+<h2 id="fileHandling">Java File Handling</h2>
+<p>
+    Java provides the <code>java.io</code> package for file handling. It includes classes like <code>File</code>, <code>FileReader</code>, and <code>FileWriter</code> for reading from and writing to files.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        import java.io.*;
+
+        public class FileExample {
+            public static void main(String[] args) throws IOException {
+                FileWriter writer = new FileWriter("example.txt");
+                writer.write("Hello, world!");
+                writer.close();
+
+                BufferedReader reader = new BufferedReader(new FileReader("example.txt"));
+                String line = reader.readLine();
+                System.out.println(line); // Outputs: Hello, world!
+                reader.close();
+            }
+        }
+    </code>
+</pre>
+
+<h2 id="generics">Java Generics</h2>
+<p>
+    Generics allow classes, interfaces, and methods to operate on objects of various types while providing compile-time type safety. This prevents runtime errors due to type mismatches.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        class Box<T> {
+            private T value;
+
+            public void setValue(T value) {
+                this.value = value;
+            }
+
+            public T getValue() {
+                return value;
+            }
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                Box<Integer> intBox = new Box<>();
+                intBox.setValue(10);
+                System.out.println(intBox.getValue()); // Outputs: 10
+            }
+        }
+    </code>
+</pre>
+
+<h2 id="collections">Java Collections</h2>
+<p>
+    The <code>java.util</code> package provides a set of classes and interfaces that implement commonly used collections like lists, sets, and maps. These collections help store and manipulate data efficiently.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        import java.util.*;
+
+        public class CollectionExample {
+            public static void main(String[] args) {
+                List<String> fruits = new ArrayList<>();
+                fruits.add("Apple");
+                fruits.add("Banana");
+                fruits.add("Orange");
+
+                for (String fruit : fruits) {
+                    System.out.println(fruit);
+                }
+            }
+        }
+    </code>
+</pre>
+
+<h2 id="streams">Java Streams</h2>
+<p>
+    Java Streams API allows functional-style operations on streams of elements. It enables processing sequences of elements in a declarative way using methods like <code>filter</code>, <code>map</code>, and <code>reduce</code>.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        import java.util.*;
+        import java.util.stream.*;
+
+        public class StreamExample {
+            public static void main(String[] args) {
+                List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+                int sum = numbers.stream()
+                                 .filter(n -> n % 2 == 0)
+                                 .mapToInt(Integer::intValue)
+                                 .sum();
+                System.out.println("Sum of even numbers: " + sum); // Outputs: 6
+            }
+        }
+    </code>
+</pre>
+
+<h2 id="annotations">Java Annotations</h2>
+<p>
+    Annotations provide metadata about the program but are not part of the program's logic. They are used to give instructions to the compiler or tools, like marking a method as deprecated or indicating that a method should override another method.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        @Override
+        public String toString() {
+            return "Custom toString method";
+        }
+
+        @Deprecated
+        public void oldMethod() {
+            System.out.println("This method is deprecated.");
+        }
+    </code>
+</pre>
+
+<h2 id="lambda">Java Lambda Expressions</h2>
+<p>
+    Lambda expressions allow you to pass behavior as a parameter to a method, simplifying the code. They are often used to implement functional interfaces.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        interface MathOperation {
+            int operation(int a, int b);
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                MathOperation add = (a, b) -> a + b;
+                System.out.println(add.operation(5, 3)); // Outputs: 8
+            }
+        }
+    </code>
+</pre>
+
+<h2 id="dateTime">Java Date and Time</h2>
+<p>
+    The <code>java.time</code> package in Java provides a comprehensive and standardized way of handling date and time. It includes classes such as <code>LocalDate</code>, <code>LocalTime</code>, and <code>LocalDateTime</code>.
+</p>
+<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd;">
+    <code style="color: #000;">
+        import java.time.*;
+
+        public class DateTimeExample {
+            public static void main(String[] args) {
+                LocalDate today = LocalDate.now();
+                System.out.println("Today's date: " + today); // Outputs: Current date
+
+                LocalTime time = LocalTime.now();
+                System.out.println("Current time: " + time); // Outputs: Current time
+            }
+        }
+    </code>
+</pre>
+
+
+</div>
+
+
+
+
+
+<!-- interpreter -->
+
+<div class="interp">
+    <div >
+        <div  >
+
+          <button id="runbtn"
+          onclick="submitTryit(1);uic_r_p();">Run &#10095;</button>
+
+        </div>
+        </div>
+
+
+
+
+        <div id="container">
+
+        <div id="textareacontainer">
+        <div style="font-size:small;">Enter your code here...</div>
+        <div id="textarea">
+        <div id="textareawrapper">
+
+              <textarea id="textareaCode">
+class HelloWorld {
+    public static void main(String[] args){
+        System.out.println("Hello, World!");
+       }
+      }
+        </textarea>
+              <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+                <input type="hidden" name="code" id="code" />
+              </form>
+
+         </div>
+        </div>
+        </div>
+        <div style=" font-size:small;">
+        Output
+        </div>
+        <div  id="iframecontainer " >
+
+        <div style="height: 200px;width: 360px;color: aliceblue; background-color: rgb(31, 30, 30); margin-bottom:10px ;" id="iframe">
+
+          <div id="runloadercontainer"><div id="runloader"></div></div>
+
+
+        <div id="iframewrapper">
+
+          <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
+
+          </div>
+              <div>
+                Hello, World!
+
+              </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+
+        </div>
+        <script>
+
+function submitTryit(n) {
+
+  if (window.editor) {
+    window.editor.save();
+  }
+
+var text = document.getElementById("textareaCode").value;
+
+var ifr = document.createElement("iframe");
+ifr.width = '360px';
+ifr.height = '200px';
+ifr.setAttribute("frameborder", "0");
+ifr.setAttribute("id", "iframeResult");
+ifr.setAttribute("name", "iframeResult");
+
+document.getElementById("iframewrapper").innerHTML = "";
+document.getElementById("iframewrapper").appendChild(ifr);
+
+document.getElementById("iframeResult").addEventListener("load", hideSpinner);
+displaySpinner();
+var t=text;
+t=t.replace(/=/gi,"w3equalsign");
+t=t.replace(/\+/gi,"w3plussign");
+var pos=t.search(/script/i)
+while (pos>0) {
+  t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
+  pos=t.search(/script/i);
+}
+
+document.getElementById("code").value=t;
+
+  document.getElementById("codeForm").action = "https://try.w3schools.com/try_java.php?x=" + Math.random();
+
+document.getElementById('codeForm').method = "post";
+document.getElementById('codeForm').acceptCharset = "utf-8";
+document.getElementById('codeForm').target = "iframeResult";
+document.getElementById("codeForm").submit();
+
+}
+
+function hideSpinner() {
+document.getElementById("runloadercontainer").style.display = "none";
+}
+function displaySpinner() {
+var i, c, w, h, r, top;
+i = document.getElementById("iframeResult");
+w = w3_getStyleValue(i, "width");
+h = w3_getStyleValue(i, "height");
+c = document.getElementById("runloadercontainer");
+c.style.width = w;
+c.style.height = h;
+c.style.display = "block";
+w = Number(w.replace("px", "")) / 5;
+r = document.getElementById("runloader");
+r.style.width = w + "px";
+r.style.height = w + "px";
+h = w3_getStyleValue(r, "height");
+h = Number(h.replace("px", "")) / 2;
+top = w3_getStyleValue(c, "height");
+top = Number(top.replace("px", "")) / 2;
+top = top - h
+r.style.top = top + "px";
+}
+
+var currentStack=true;
+if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+function restack(horizontal) {
+  var tc, ic, t, i, c, f, sv, sh, d, b, height, flt, width;
+  tc = document.getElementById("textareacontainer");
+  ic = document.getElementById("iframecontainer");
+  t = document.getElementById("textarea");
+  i = document.getElementById("iframe");
+  c = document.getElementById("container");
+  sv = document.getElementById("stackV");
+  sh = document.getElementById("stackH");
+  b = document.getElementsByClassName("localhostoutercontainer");
+  tc.className = tc.className.replace("horizontal", "");
+  ic.className = ic.className.replace("horizontal", "");
+  t.className = t.className.replace("horizontal", "");
+  i.className = i.className.replace("horizontal", "");
+  c.className = c.className.replace("horizontal", "");
+  if (b[0]) {b[0].className = b[0].className.replace("horizontal", "")};
+  if (sv) {sv.className = sv.className.replace("horizontal", "")};
+  if (sv) {sh.className = sh.className.replace("horizontal", "")};
+  stack = "";
+  if (horizontal) {
+      tc.className = tc.className + " horizontal";
+      ic.className = ic.className + " horizontal";
+      t.className = t.className + " horizontal";
+      i.className = i.className + " horizontal";
+      c.className = c.className + " horizontal";
+      if (sv) {sv.className = sv.className + " horizontal"};
+      if (sv) {sh.className = sh.className + " horizontal"};
+      if (b[0]) {b[0].className = b[0].className + " horizontal"};
+      stack = " horizontal";
+      document.getElementById("textareacontainer").style.height = "50%";
+      document.getElementById("iframecontainer").style.height = "50%";
+      document.getElementById("textareacontainer").style.width = "100%";
+      document.getElementById("iframecontainer").style.width = "100%";
+      currentStack=false;
+  } else {
+      document.getElementById("textareacontainer").style.height = "100%";
+      document.getElementById("iframecontainer").style.height = "100%";
+      document.getElementById("textareacontainer").style.width = "50%";
+      document.getElementById("iframecontainer").style.width = "50%";
+      currentStack=true;
+  }
+  fixDragBtn();
+  showFrameSize();
+
+}
+function showFrameSize() {
+var t;
+var width, height;
+width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
+height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
+}
+var dragging = false;
+var stack;
+function fixDragBtn() {
+var textareawidth, leftpadding, dragleft, containertop, buttonwidth
+var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+if (stack != " horizontal") {
+  document.getElementById("dragbar").style.width = "5px";
+  textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
+  leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
+  buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
+  textareaheight = w3_getStyleValue(document.getElementById("textareawrapper"), "height");
+  dragleft = textareasize + leftpadding + (leftpadding / 2) - (buttonwidth / 2);
+  document.getElementById("dragbar").style.top = containertop + "px";
+  document.getElementById("dragbar").style.left = dragleft + "px";
+  document.getElementById("dragbar").style.height = textareaheight;
+  document.getElementById("dragbar").style.cursor = "col-resize";
+
+} else {
+  document.getElementById("dragbar").style.height = "5px";
+  if (window.getComputedStyle) {
+      textareawidth = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("height");
+      textareaheight = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("width");
+      leftpadding = window.getComputedStyle(document.getElementById("textarea"),null).getPropertyValue("padding-top");
+      buttonwidth = window.getComputedStyle(document.getElementById("dragbar"),null).getPropertyValue("height");
+  } else {
+      dragleft = document.getElementById("textareawrapper").currentStyle["width"];
+  }
+  textareawidth = Number(textareawidth.replace("px", ""));
+  leftpadding = Number(leftpadding .replace("px", ""));
+  buttonwidth = Number(buttonwidth .replace("px", ""));
+  dragleft = containertop + textareawidth + leftpadding + (leftpadding / 2);
+  document.getElementById("dragbar").style.top = dragleft + "px";
+  document.getElementById("dragbar").style.left = "5px";
+  document.getElementById("dragbar").style.width = textareaheight;
+  document.getElementById("dragbar").style.cursor = "row-resize";
+}
+}
+function dragstart(e) {
+e.preventDefault();
+dragging = true;
+var main = document.getElementById("iframecontainer");
+}
+function dragmove(e) {
+if (dragging)
+{
+  document.getElementById("shield").style.display = "block";
+  if (stack != " horizontal") {
+    var percentage = (e.pageX / window.innerWidth) * 100;
+    if (percentage > 5 && percentage < 98) {
+      var mainPercentage = 100-percentage;
+      document.getElementById("textareacontainer").style.width = percentage + "%";
+      document.getElementById("iframecontainer").style.width = mainPercentage + "%";
+      fixDragBtn();
+    }
+  } else {
+    var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+    var percentage = ((e.pageY - containertop + 20) / (window.innerHeight - containertop + 20)) * 100;
+    if (percentage > 5 && percentage < 98) {
+      var mainPercentage = 100-percentage;
+      document.getElementById("textareacontainer").style.height = percentage + "%";
+      document.getElementById("iframecontainer").style.height = mainPercentage + "%";
+      fixDragBtn();
+    }
+  }
+  showFrameSize();
+
+
+}
+}
+function dragend() {
+document.getElementById("shield").style.display = "none";
+dragging = false;
+var vend = navigator.vendor;
+if (window.editor && vend.indexOf("Apple") == -1) {
+    window.editor.refresh();
+}
+}
+if (window.addEventListener) {
+document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
+document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
+window.addEventListener("mousemove", function(e) {dragmove(e);});
+window.addEventListener("touchmove", function(e) {dragmove(e);});
+window.addEventListener("mouseup", dragend);
+window.addEventListener("touchend", dragend);
+window.addEventListener("load", fixDragBtn);
+window.addEventListener("load", showFrameSize);
+
+}
+
+function retheme() {
+var cc = document.body.className;
+if (cc.indexOf("darktheme") > -1) {
+  document.body.className = cc.replace("darktheme", "");
+  if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+  localStorage.setItem("preferredmode", "light");
+} else {
+  document.body.className += " darktheme";
+  if (opener) {opener.document.body.className += " darktheme";}
+  localStorage.setItem("preferredmode", "dark");
+}
+}
+(
+function setThemeMode() {
+var x = localStorage.getItem("preferredmode");
+if (x == "dark") {
+  document.body.className += " darktheme";
+}
+})();
+function colorcoding() {
+var ua = navigator.userAgent;
+//Opera Mini refreshes the page when trying to edit the textarea.
+if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+mode: "text/x-java",
+lineWrapping: true,
+smartIndent: false,
+htmlMode: true,
+autocorrect: false,
+addModeClass: true,
+
+
+  //mode: "text/x-java",
+  //lineWrapping: true,
+  //autocorrect: false,
+  //smartIndent: false
+
+});
+//  window.editor.on("change", function () {window.editor.save();});
+}
+
+colorcoding();
+
+
+function clickTab(x) {
+
+return false;
+
+}
+
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+      return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+      return elmnt.currentStyle[style];
+  }
+}
+</script>
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+                </div>
+
+            </div>
+  </div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<footer>
+<h5>you can add your data here in the footer section</h5>
+</footer>
+
+
+</body>
+</html>

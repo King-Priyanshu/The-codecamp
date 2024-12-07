@@ -1,0 +1,157 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    background-color: #0e1d31;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px;
+    margin-top: -140px;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.intrOCODECAMP {
+    font-weight: 800;
+    font-size: large;
+    color: rgb(181, 20, 213);
+    margin-top: 20px;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideAndFadeIn 1s forwards, fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.introwelcome {
+    font-weight: 800;
+    font-size: 125px;
+    color: rgb(255, 114, 62);
+    margin-top: -35px;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideAndFadeIn 1s forwards;
+    animation-delay: 1s;
+    padding-left: 40px;
+    margin-bottom: -20px;
+}
+
+.introwelcome2 {
+    font-weight: 800;
+    font-size: 45px;
+    color: rgb(255, 114, 62);
+    margin-top: 0px;
+    margin-left: 45px;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideAndFadeIn 1s forwards;
+    animation-delay: 1s;
+    padding-left: 40px;
+}
+
+.introhello {
+    font-size: x-large;
+    margin-top: 20px;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideAndFadeIn 1s forwards;
+    animation-delay: 1.5s;
+    padding-left: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.intro {
+    font-weight: 200;
+    font-size: medium;
+    margin-top: 10px;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideAndFadeIn 1s forwards;
+    animation-delay: 2s;
+    padding-left: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.button {
+    border-radius: 50px;
+    margin-top: 30px;
+    border: none;
+    background-color: rgb(244, 121, 60);
+    color: rgb(239, 235, 235);
+    text-align: center;
+    font-size: 18px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideAndFadeIn 1s forwards;
+    animation-delay: 2.5s;
+    margin-left: 70px;
+}
+
+@keyframes slideAndFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #0e1d31;
+    padding: 10px;
+}
+
+/* Media queries */
+
+/* Adjustments for screens smaller than 768px (phones) */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .introwelcome {
+        font-size: 80px;
+    }
+
+    .introhello {
+        font-size: large;
+    }
+
+    .intro,
+    .button {
+        padding-left: 0;
+        text-align: center;
+        margin-left: 0;
+        font-size: small;
+    }
+}

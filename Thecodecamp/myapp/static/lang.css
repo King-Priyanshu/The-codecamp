@@ -1,0 +1,97 @@
+body {
+    background: linear-gradient(45deg, #0e1d31, #122641, #172b44, #0e76a8, #d080f6, #589df8, #0e1d31);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+}
+
+.button {
+    border-radius: 25px;
+    background-color: rgba(209, 203, 203, 0.2);
+    border: 1px solid rgba(74, 67, 67, 0.5);
+    width: 150px;
+    height: 40px;
+    color: #f0e9e9;
+    font-size: 16px;
+    outline: none;
+    margin-left: -50%;
+    margin-bottom: 50px;
+}
+
+.svg {
+    margin-bottom: 39px;
+}
+
+.title {
+    color: aliceblue;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    margin-right: 150px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container {
+        justify-content: center;
+    }
+    .title {
+        font-size: x-large;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: large;
+        margin-right: 0;
+    }
+
+    .button {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .svg {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: medium;
+        margin-right: 0;
+    }
+
+    .button {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .svg {
+        width: 32px;
+        height: 32px;
+    }
+}

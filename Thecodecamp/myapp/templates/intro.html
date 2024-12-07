@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Introduction</title>
+    <link rel="stylesheet" href="{% static 'intro.css' %}">
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- <div class="intrOCODECAMP">THE CODECAMP</div> -->
+            <div style="margin: 6%;"><img src="{% static 'logo.png' %}" alt="Loading..." width="400" height="250" style="margin-top: 100px;"></div>
+            <div class="introwelcome">WELCOME</div>
+            <div class="introwelcome2">to The Codecamp</div>
+            <div class="introhello">Hello, Glad you're here!</div>
+            <div class="intro">Codecamp is a coding learning platform for beginners<br>Join us to learn programming</div>
+            <button class="button" type="button" onclick="location.href='{% url 'lang' %}'">Get Started →</button>
+
+        </div>
+    <div class="container2">
+        <div class="intro" style="margin-top: 20%; font-size: 40;">A programming language is a formal language comprising a set of instructions that produce various kinds of output. Programmers use these languages to communicate with computers, enabling them to execute specific tasks. Common programming languages include C, C++, Java, and Python, each suited to different types of projects and applications.
+
+            <br> → C++: Builds on C with object-oriented features, making it popular for software development, game development, and high-performance applications.
+            <br> → Java: Widely used for its portability across platforms, commonly found in web applications, enterprise software, and Android app development.
+            <br> → Python: Praised for its readability and ease of use, making it a favorite for beginners and a powerful tool for web development, data analysis, artificial intelligence, and more.<br><pre>
+            </pre>
+           <div  style="color: rgb(109, 163, 238);"> Hello and welcome! We are delighted to have you here. Our website is dedicated to [briefly describe the purpose of your website, e.g., sharing knowledge about web development, showcasing our projects, providing resources and tutorials, etc.].
+
+                 We believe in [mention any core values or beliefs, e.g., innovation, creativity, learning, etc.] and strive to [mention your main goal, e.g., provide valuable insights, create a community of learners, inspire others, etc.].
+
+                   Whether you are here to learn, explore, or simply get inspired, we hope you find what you are looking for. Feel free to browse through our sections, meet our team, and don't hesitate to get in touch with us if you have any questions or feedback.
+            </div>
+        </div>
+
+        <div style="margin-top: 10%;" ><img src="{% static 'lang_logo.png' %}" alt="Loading..." width="350" height="175"></div>
+        <div style="color: aliceblue; margin-right: 20px;">Designed and Devloped by <br> Maixit ,Priyanshu</div>
+    </div>
+
+</body>
+</html>

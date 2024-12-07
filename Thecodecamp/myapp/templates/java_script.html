@@ -1,0 +1,1204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page with Header, Footer, Sidebar, and Content</title>
+  <link rel="stylesheet" href="{% static "lololocss.css" %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'logo.png' %}" alt="cuming soon" height="90" width="180">
+        <div class="head">javaScript</div>
+
+    </header>
+
+
+
+
+    <div class="heading">
+
+        <div style="margin-left: 20%;cursor: pointer;  text-decoration: underline;" id="toggle-sidebar">javaScript tutorials</div>
+        <script>
+            const button = document.getElementById('toggle-sidebar');
+            button.addEventListener('click', () => {
+                document.body.classList.toggle('sidebar-visible');
+            });
+        </script>
+    </div>
+    <aside>
+        <script>
+            function scrollToSection(sectionId) {
+              document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+            </script>
+
+    <div  class="hover-button"  onclick="scrollToSection('home')">JS HOME</div>
+    <div  class="hover-button"onclick="scrollToSection('introduction')">JS Introduction</div>
+    <div  class="hover-button" onclick="scrollToSection('whereTo')">JS Where To</div>
+    <div  class="hover-button" onclick="scrollToSection('output')">JS Output</div>
+    <div  class="hover-button" onclick="scrollToSection('statements')">JS Statements</div>
+    <div  class="hover-button" onclick="scrollToSection('syntax')">JS Syntax</div>
+    <div  class="hover-button" onclick="scrollToSection('comments')">JS Comments</div>
+    <div  class="hover-button" onclick="scrollToSection('variables')">JS Variables</div>
+    <div  class="hover-button" onclick="scrollToSection('let')">JS Let</div>
+    <div  class="hover-button" onclick="scrollToSection('const')">JS Const</div>
+    <div  class="hover-button" onclick="scrollToSection('operators')">JS Operators</div>
+    <div  class="hover-button" onclick="scrollToSection('arithmetic')">JS Arithmetic</div>
+    <div  class="hover-button" onclick="scrollToSection('assignment')">JS Assignment</div>
+    <div  class="hover-button" onclick="scrollToSection('dataTypes')">JS Data Types</div>
+    <div  class="hover-button" onclick="scrollToSection('functions')">JS Functions</div>
+    <div  class="hover-button" onclick="scrollToSection('objects')">JS Objects</div>
+    <div  class="hover-button" onclick="scrollToSection('objectProperties')">JS Object Properties</div>
+    <div  class="hover-button" onclick="scrollToSection('objectMethods')">JS Object Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('objectDisplay')">JS Object Display</div>
+    <div  class="hover-button" onclick="scrollToSection('objectConstructors')">JS Object Constructors</div>
+    <div  class="hover-button" onclick="scrollToSection('events')">JS Events</div>
+    <div  class="hover-button" onclick="scrollToSection('strings')">JS Strings</div>
+    <div  class="hover-button" onclick="scrollToSection('stringMethods')">JS String Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('stringSearch')">JS String Search</div>
+    <div  class="hover-button" onclick="scrollToSection('stringTemplates')">JS String Templates</div>
+    <div  class="hover-button" onclick="scrollToSection('numbers')">JS Numbers</div>
+    <div  class="hover-button" onclick="scrollToSection('bigInt')">JS BigInt</div>
+    <div  class="hover-button" onclick="scrollToSection('numberMethods')">JS Number Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('numberProperties')">JS Number Properties</div>
+    <div  class="hover-button" onclick="scrollToSection('arrays')">JS Arrays</div>
+    <div  class="hover-button" onclick="scrollToSection('arrayMethods')">JS Array Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('arraySearch')">JS Array Search</div>
+    <div  class="hover-button" onclick="scrollToSection('arraySort')">JS Array Sort</div>
+    <div  class="hover-button" onclick="scrollToSection('arrayIteration')">JS Array Iteration</div>
+    <div  class="hover-button" onclick="scrollToSection('arrayConst')">JS Array Const</div>
+    <div  class="hover-button" onclick="scrollToSection('dates')">JS Dates</div>
+    <div  class="hover-button" onclick="scrollToSection('dateFormats')">JS Date Formats</div>
+    <div  class="hover-button" onclick="scrollToSection('dateGetMethods')">JS Date Get Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('dateSetMethods')">JS Date Set Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('math')">JS Math</div>
+    <div  class="hover-button" onclick="scrollToSection('random')">JS Random</div>
+    <div  class="hover-button" onclick="scrollToSection('booleans')">JS Booleans</div>
+    <div  class="hover-button" onclick="scrollToSection('comparisons')">JS Comparisons</div>
+    <div  class="hover-button" onclick="scrollToSection('ifElse')">JS If Else</div>
+    <div  class="hover-button" onclick="scrollToSection('switch')">JS Switch</div>
+    <div  class="hover-button"onclick="scrollToSection('loopFor')">JS Loop For</div>
+    <div  class="hover-button" onclick="scrollToSection('loopForIn')">JS Loop For In</div>
+    <div  class="hover-button" onclick="scrollToSection('loopForOf')">JS Loop For Of</div>
+    <div  class="hover-button" onclick="scrollToSection('loopWhile')">JS Loop While</div>
+    <div  class="hover-button" onclick="scrollToSection('break')">JS Break</div>
+    <div  class="hover-button" onclick="scrollToSection('iterables')">JS Iterables</div>
+    <div  class="hover-button" onclick="scrollToSection('sets')">JS Sets</div>
+    <div  class="hover-button" onclick="scrollToSection('setMethods')">JS Set Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('maps')">JS Maps</div>
+    <div  class="hover-button" onclick="scrollToSection('mapMethods')">JS Map Methods</div>
+    <div  class="hover-button" onclick="scrollToSection('typeof')">JS Typeof</div>
+    <div  class="hover-button" onclick="scrollToSection('typeConversion')">JS Type Conversion</div>
+    <div  class="hover-button" onclick="scrollToSection('destructuring')">JS Destructuring</div>
+    <div  class="hover-button" onclick="scrollToSection('bitwise')">JS Bitwise</div>
+    <div  class="hover-button" onclick="scrollToSection('regexp')">JS RegExp</div>
+    <div  class="hover-button" onclick="scrollToSection('precedence')">JS Precedence</div>
+    <div  class="hover-button" onclick="scrollToSection('errors')">JS Errors</div>
+    <div  class="hover-button" onclick="scrollToSection('scope')">JS Scope</div>
+    <div  class="hover-button" onclick="scrollToSection('hoisting')">JS Hoisting</div>
+    <div  class="hover-button" onclick="scrollToSection('strictMode')">JS Strict Mode</div>
+    <div  class="hover-button" onclick="scrollToSection('thisKeyword')">JS this Keyword</div>
+    <div  class="hover-button" onclick="scrollToSection('arrowFunction')">JS Arrow Function</div>
+    <div  class="hover-button" onclick="scrollToSection('classes')">JS Classes</div>
+    <div  class="hover-button" onclick="scrollToSection('modules')">JS Modules</div>
+    <div  class="hover-button" onclick="scrollToSection('json')">JS JSON</div>
+    <div  class="hover-button" onclick="scrollToSection('debugging')">JS Debugging</div>
+    <div  class="hover-button" onclick="scrollToSection('styleGuide')">JS Style Guide</div>
+    <div  class="hover-button" onclick="scrollToSection('bestPractices')">JS Best Practices</div>
+    <div  class="hover-button" onclick="scrollToSection('mistakes')">JS Mistakes</div>
+    <div  class="hover-button" onclick="scrollToSection('performance')">JS Performance</div>
+    <div  class="hover-button" onclick="scrollToSection('reservedWords')">JS Reserved Words</div>
+    </div>
+
+    </aside>
+
+    <div class="main-content">
+        <div class="content">
+
+          <section id="home">
+            <h2>1. JS HOME</h2>
+            <p>This guide provides a comprehensive overview of JavaScript, covering basic to advanced topics to help you become proficient in the language.</p>
+        </section>
+
+        <section id="introduction">
+            <h2>2. JS Introduction</h2>
+            <p>JavaScript is a versatile scripting language used to create dynamic and interactive web content. It runs in web browsers and can also be used on the server side with Node.js.</p>
+           <pre></pre>
+
+    </section>
+
+        <section id="whereTo">
+            <h2>3. JS Where To</h2>
+            <p>JavaScript can be included directly in HTML documents between <code>&lt;script&gt;</code> tags or referenced externally using the <code>&lt;script src="filename.js"&gt;</code> tag.</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;JavaScript in Body&lt;/h2&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("demo").innerHTML = "My First JavaScript";
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+        </section>
+
+        <section id="output">
+            <h2>4. JS Output</h2>
+            <p>Writing into an HTML element, using innerHTML.
+                Writing into the HTML output using document.write().
+                Writing into an alert box, using window.alert().
+                Writing into the browser console, using console.log().
+                Output JavaScript results using <code>console.log()</code> or by modifying the HTML content:</p>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;body&gt;
+
+        &lt;h2&gt;My First Web Page&lt;/h2&gt;
+        &lt;p&gt;My First Paragraph.&lt;/p&gt;
+
+        &lt;p id="demo"&gt;&lt;/p&gt;
+
+        &lt;script&gt;
+        document.getElementById("demo").innerHTML = 5 + 6;
+        &lt;/script&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+            </pre>
+            <pre>
+<!DOCTYPE html>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+document.write(5 + 6);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;p id="result"&gt;&lt;/p&gt;
+&lt;button type="button" onclick="document.getElementById('result').textContent = 5 + 6"&gt;Try it&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </section>
+
+        <section id="statements">
+            <h2>5. JS Statements</h2>
+            <p>Statements are individual instructions that perform actions. In JavaScript, statements end with a semicolon <code>;</code>.</p>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;JavaScript Statements&lt;/h2&gt;
+
+&lt;p&gt;JavaScript statements are separated by semicolons.&lt;/p&gt;
+
+&lt;p id="demo1"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+let a, b, c;
+a = 5;
+b = 6;
+c = a + b;
+document.getElementById("demo1").innerHTML = c;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+        </section>
+
+        <section id="syntax">
+            <h2>6. JS Syntax</h2>
+            <p>JavaScript syntax includes rules for writing statements and code blocks. Code blocks are enclosed in curly braces <code>{}</code>.</p>
+            <pre>
+        if (condition) {
+            // code block
+        }
+            </pre>
+        </section>
+
+        <section id="comments">
+            <h2>7. JS Comments</h2>
+            <p>Comments are used to annotate code and are ignored by the JavaScript engine. Use <code>//</code> for single-line comments and <code>/*...*/</code> for multi-line comments.</p>
+            <pre>
+        // Single-line comment
+        /*
+         Multi-line comment
+        */
+            </pre>
+        </section>
+
+        <section id="variables">
+            <h2>8. JS Variables</h2>
+            <p>Variables store values. Declare variables using <code>let</code>, <code>const</code>, or <code>var</code>:</p>
+            <pre>
+        let name = "John";
+        const age = 30;
+        var city = "New York";
+            </pre>
+        </section>
+
+        <section id="let">
+            <h2>9. JS Let</h2>
+            <p><code>let</code> is used to declare variables that can be updated:</p>
+            <pre>
+        let score = 10;
+        score = 20; // Updated value
+            </pre>
+        </section>
+
+        <section id="const">
+            <h2>10. JS Const</h2>
+            <p><code>const</code> is used to declare variables that cannot be reassigned:</p>
+            <pre>
+        const pi = 3.14;
+        // pi = 3.14159; // Error: Assignment to constant variable
+            </pre>
+        </section>
+
+        <section id="operators">
+            <h2>11. JS Operators</h2>
+            <p>Operators are used to perform operations on variables and values. Common types include arithmetic, assignment, and comparison operators:</p>
+            <pre>
+        let a = 5 + 3; // Addition
+        let b = 5 - 2; // Subtraction
+        let c = 5 * 2; // Multiplication
+        let d = 10 / 2; // Division
+        let isEqual = (a == b); // Comparison
+            </pre>
+        </section>
+
+        <section id="arithmetic">
+            <h2>12. JS Arithmetic</h2>
+            <p>Arithmetic operators perform mathematical operations:</p>
+            <pre>
+        let sum = 10 + 5; // Addition
+        let product = 10 * 5; // Multiplication
+            </pre>
+        </section>
+
+        <section id="assignment">
+            <h2>13. JS Assignment</h2>
+            <p>Assignment operators assign values to variables. The most common is <code>=</code>:</p>
+            <pre>
+        let x = 5;
+        x += 2; // x is now 7
+            </pre>
+        </section>
+
+        <section id="dataTypes">
+            <h2>14. JS Data Types</h2>
+            <p>JavaScript supports various data types including strings, numbers, booleans, objects, and arrays:</p>
+            <pre>
+        let str = "Hello";
+        let num = 100;
+        let isTrue = true;
+        let obj = { name: "John", age: 30 };
+        let arr = [1, 2, 3];
+            </pre>
+        </section>
+
+        <section id="functions">
+            <h2>15. JS Functions</h2>
+            <p>Functions are blocks of code designed to perform a task. They can be defined using the <code>function</code> keyword:</p>
+            <pre>
+        function greet(name) {
+            return "Hello, " + name;
+        }
+        console.log(greet("Alice")); // Hello, Alice
+            </pre>
+        </section>
+
+        <section id="objects">
+            <h2>16. JS Objects</h2>
+            <p>Objects store collections of data as key-value pairs:</p>
+            <pre>
+        let person = {
+            name: "John",
+            age: 30,
+            greet: function() {
+                return "Hello, " + this.name;
+            }
+        };
+        console.log(person.greet()); // Hello, John
+            </pre>
+        </section>
+
+        <section id="objectProperties">
+            <h2>17. JS Object Properties</h2>
+            <p>Access and modify object properties using dot notation or bracket notation:</p>
+            <pre>
+        let car = { brand: "Toyota", model: "Corolla" };
+        console.log(car.brand); // Toyota
+        car.year = 2020;
+            </pre>
+        </section>
+
+        <section id="objectMethods">
+            <h2>18. JS Object Methods</h2>
+            <p>Methods are functions that are properties of an object:</p>
+            <pre>
+        let person = {
+            name: "Alice",
+            greet: function() {
+                return "Hello, " + this.name;
+            }
+        };
+        console.log(person.greet()); // Hello, Alice
+            </pre>
+        </section>
+
+        <section id="objectDisplay">
+            <h2>19. JS Object Display</h2>
+            <p>Display object properties and methods:</p>
+            <pre>
+        let car = { brand: "Ford", model: "Mustang" };
+        console.log(car); // { brand: "Ford", model: "Mustang" }
+            </pre>
+        </section>
+
+        <section id="objectConstructors">
+            <h2>20. JS Object Constructors</h2>
+            <p>Use constructors to create new objects using the <code>new</code> keyword:</p>
+            <pre>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let john = new Person("John", 25);
+        console.log(john.name); // John
+            </pre>
+        </section>
+
+        <section id="events">
+            <h2>21. JS Events</h2>
+            <p>Events are actions that JavaScript can respond to, such as user interactions:</p>
+            <pre>
+        document.getElementById("myButton").addEventListener("click", function() {
+            alert("Button clicked!");
+        });
+            </pre>
+        </section>
+
+        <section id="strings">
+            <h2>22. JS Strings</h2>
+            <p>Strings are sequences of characters enclosed in quotes:</p>
+            <pre>
+        let str = "Hello, World!";
+        console.log(str); // Hello, World!
+            </pre>
+        </section>
+
+        <section id="stringmethods">
+            <h2>23. JS String Methods</h2>
+            <p>Strings have various methods like <code>toUpperCase()</code> and <code>slice()</code>:</p>
+            <pre>
+        let str = "JavaScript";
+        console.log(str.toUpperCase()); // JAVASCRIPT
+        console.log(str.slice(0, 4)); // Java
+            </pre>
+        </section>
+
+        <section id="stringSearch">
+            <h2>24. JS String Search</h2>
+            <p>Search for substrings within a string using <code>indexOf()</code>:</p>
+            <pre>
+        let str = "Hello, World!";
+        console.log(str.indexOf("World")); // 7
+            </pre>
+        </section>
+
+        <section id="stringTemplates">
+            <h2>25. JS String Templates</h2>
+            <p>Template literals allow embedded expressions and multi-line strings:</p>
+            <pre>
+        let name = "John";
+        let message = `Hello, ${name}!`;
+        console.log(message); // Hello, John!
+            </pre>
+        </section>
+
+        <section id="numbers">
+            <h2>26. JS Numbers</h2>
+            <p>Numbers represent both integer and floating-point values:</p>
+            <pre>
+        let int = 42;
+        let float = 3.14;
+        console.log(int); // 42
+        console.log(float); // 3.14
+            </pre>
+        </section>
+
+        <section id="bigInt">
+            <h2>27. JS BigInt</h2>
+            <p>BigInt allows representation of large integers beyond the limits of the Number type:</p>
+            <pre>
+        let bigInt = 1234567890123456789012345678901234567890n;
+        console.log(bigInt); // 1234567890123456789012345678901234567890n
+            </pre>
+        </section>
+
+        <section id="numberMethods">
+            <h2>28. JS Number Methods</h2>
+            <p>Number methods include <code>toFixed()</code> and <code>toString()</code>:</p>
+            <pre>
+        let num = 10.567;
+        console.log(num.toFixed(2)); // 10.57
+        console.log(num.toString()); // "10.567"
+            </pre>
+        </section>
+
+        <section id="numberProperties">
+            <h2>29. JS Number Properties</h2>
+            <p>Number properties include constants like <code>Number.MAX_VALUE</code>:</p>
+            <pre>
+        console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
+            </pre>
+        </section>
+
+        <section id="arrays">
+            <h2>30. JS Arrays</h2>
+            <p>Arrays store lists of values:</p>
+            <pre>
+        let fruits = ["Apple", "Banana", "Cherry"];
+        console.log(fruits); // ["Apple", "Banana", "Cherry"]
+            </pre>
+        </section>
+
+        <section id="arrayMethods">
+            <h2>31. JS Array Methods</h2>
+            <p>Array methods include <code>push()</code>, <code>pop()</code>, and <code>splice()</code>:</p>
+            <pre>
+        let numbers = [1, 2, 3];
+        numbers.push(4); // [1, 2, 3, 4]
+        numbers.pop(); // [1, 2, 3]
+        numbers.splice(1, 1, 10); // [1, 10, 3]
+            </pre>
+        </section>
+
+        <section id="arraySearch">
+            <h2>32. JS Array Search</h2>
+            <p>Search arrays using <code>indexOf()</code> and <code>find()</code>:</p>
+            <pre>
+        let arr = [10, 20, 30];
+        console.log(arr.indexOf(20)); // 1
+        console.log(arr.find(x => x > 15)); // 20
+            </pre>
+        </section>
+
+        <section id="arraySort">
+            <h2>33. JS Array Sort</h2>
+            <p>Sort arrays using <code>sort()</code>:</p>
+            <pre>
+        let numbers = [4, 2, 5, 1, 3];
+        numbers.sort();
+        console.log(numbers); // [1, 2, 3, 4, 5]
+            </pre>
+        </section>
+
+        <section id="arrayIteration">
+            <h2>34. JS Array Iteration</h2>
+            <p>Iterate over arrays using <code>forEach()</code>:</p>
+            <pre>
+        let numbers = [1, 2, 3];
+        numbers.forEach(num => console.log(num));
+            </pre>
+        </section>
+
+        <section id="arrayConst">
+            <h2>35. JS Array Const</h2>
+            <p>Arrays declared with <code>const</code> cannot be reassigned, but their contents can be modified:</p>
+            <pre>
+        const fruits = ["Apple", "Banana"];
+        fruits.push("Cherry");
+        console.log(fruits); // ["Apple", "Banana", "Cherry"]
+            </pre>
+        </section>
+
+        <section id="dates">
+            <h2>36. JS Dates</h2>
+            <p>Use the <code>Date</code> object to work with dates and times:</p>
+            <pre>
+        let today = new Date();
+        console.log(today); // Current date and time
+            </pre>
+        </section>
+
+        <section id="dateFormats">
+            <h2>37. JS Date Formats</h2>
+            <p>Format dates using methods like <code>toLocaleDateString()</code>:</p>
+            <pre>
+        let date = new Date();
+        console.log(date.toLocaleDateString()); // e.g., 7/21/2024
+            </pre>
+        </section>
+
+        <section id="dateGetMethods">
+            <h2>38. JS Date Get Methods</h2>
+            <p>Get specific date and time components using methods like <code>getFullYear()</code>:</p>
+            <pre>
+        let date = new Date();
+        console.log(date.getFullYear()); // e.g., 2024
+            </pre>
+        </section>
+
+        <section id="dateSetMethods">
+            <h2>39. JS Date Set Methods</h2>
+            <p>Set specific date and time components using methods like <code>setFullYear()</code>:</p>
+            <pre>
+        let date = new Date();
+        date.setFullYear(2025);
+        console.log(date.getFullYear()); // 2025
+            </pre>
+        </section>
+
+        <section id="math">
+            <h2>40. JS Math</h2>
+            <p>The <code>Math</code> object provides mathematical constants and functions:</p>
+            <pre>
+        console.log(Math.PI); // 3.141592653589793
+        console.log(Math.sqrt(16)); // 4
+            </pre>
+        </section>
+
+        <section id="random">
+            <h2>41. JS Random</h2>
+            <p>Generate random numbers using <code>Math.random()</code>:</p>
+            <pre>
+        console.log(Math.random()); // Random number between 0 and 1
+            </pre>
+        </section>
+
+        <section id="booleans">
+            <h2>42. JS Booleans</h2>
+            <p>Booleans represent true or false values:</p>
+            <pre>
+        let isTrue = true;
+        let isFalse = false;
+        console.log(isTrue); // true
+            </pre>
+        </section>
+
+        <section id="comparisons">
+            <h2>43. JS Comparisons</h2>
+            <p>Comparison operators include <code>==</code>, <code>===</code>, <code>!=</code>, and <code>&gt;</code>:</p>
+            <pre>
+        let a = 5;
+        let b = 10;
+        console.log(a == b); // false
+        console.log(a < b); // true
+            </pre>
+        </section>
+
+        <section id="ifElse">
+            <h2>44. JS If Else</h2>
+            <p>Control flow using <code>if...else</code> statements:</p>
+            <pre>
+        let age = 18;
+        if (age >= 18) {
+            console.log("Adult");
+        } else {
+            console.log("Minor");
+        }
+            </pre>
+        </section>
+
+        <section id="switch">
+            <h2>45. JS Switch</h2>
+            <p>Use <code>switch</code> for multiple conditional branches:</p>
+            <pre>
+        let day = 2;
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            default:
+                console.log("Another day");
+        }
+            </pre>
+        </section>
+
+        <section id="loopFor">
+            <h2>46. JS Loop For</h2>
+            <p>Loop through code blocks using <code>for</code> loops:</p>
+            <pre>
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+            </pre>
+        </section>
+
+        <section id="loopForIn">
+            <h2>47. JS Loop For In</h2>
+            <p>Loop through object properties using <code>for...in</code>:</p>
+            <pre>
+        let person = { name: "Alice", age: 25 };
+        for (let key in person) {
+            console.log(key + ": " + person[key]);
+        }
+            </pre>
+        </section>
+
+        <section id="loopForOf">
+            <h2>48. JS Loop For Of</h2>
+            <p>Loop through iterable objects using <code>for...of</code>:</p>
+            <pre>
+        let numbers = [1, 2, 3];
+        for (let num of numbers) {
+            console.log(num);
+        }
+            </pre>
+        </section>
+
+        <section id="loopWhile">
+            <h2>49. JS Loop While</h2>
+            <p>Use <code>while</code> loops for repeated actions until a condition is false:</p>
+            <pre>
+        let i = 0;
+        while (i < 5) {
+            console.log(i);
+            i++;
+        }
+            </pre>
+        </section>
+
+        <section id="break">
+            <h2>50. JS Break</h2>
+            <p>Exit loops prematurely using <code>break</code>:</p>
+            <pre>
+        for (let i = 0; i < 10; i++) {
+            if (i === 5) break;
+            console.log(i);
+        }
+            </pre>
+        </section>
+
+        <section id="iterables">
+            <h2>51. JS Iterables</h2>
+            <p>Iterables are objects that can be iterated over using loops. Arrays and strings are examples:</p>
+            <pre>
+        let str = "hello";
+        for (let char of str) {
+            console.log(char);
+        }
+            </pre>
+        </section>
+
+        <section id="sets">
+            <h2>52. JS Sets</h2>
+            <p>Sets store unique values. Use methods like <code>add()</code> and <code>has()</code>:</p>
+            <pre>
+        let mySet = new Set();
+        mySet.add(1);
+        mySet.add(2);
+        console.log(mySet.has(1)); // true
+            </pre>
+        </section>
+
+        <section id="setMethods">
+            <h2>53. JS Set Methods</h2>
+            <p>Set methods include <code>delete()</code> and <code>clear()</code>:</p>
+            <pre>
+        let mySet = new Set([1, 2, 3]);
+        mySet.delete(2);
+        console.log(mySet); // Set {1, 3}
+            </pre>
+        </section>
+
+        <section id="maps">
+            <h2>54. JS Maps</h2>
+            <p>Maps store key-value pairs and maintain the insertion order. Use methods like <code>set()</code> and <code>get()</code>:</p>
+            <pre>
+        let myMap = new Map();
+        myMap.set("name", "Alice");
+        console.log(myMap.get("name")); // Alice
+            </pre>
+        </section>
+
+        <section id="mapMethods">
+            <h2>55. JS Map Methods</h2>
+            <p>Map methods include <code>delete()</code> and <code>has()</code>:</p>
+            <pre>
+        let myMap = new Map([["key1", "value1"], ["key2", "value2"]]);
+        myMap.delete("key1");
+        console.log(myMap); // Map { "key2" => "value2" }
+            </pre>
+        </section>
+
+        <section id="typeof">
+            <h2>56. JS Typeof</h2>
+            <p>Use <code>typeof</code> to determine the type of a variable:</p>
+            <pre>
+        let num = 42;
+        console.log(typeof num); // number
+            </pre>
+        </section>
+
+        <section id="typeConversion">
+            <h2>57. JS Type Conversion</h2>
+            <p>Convert between types using functions like <code>String()</code> and <code>Number()</code>:</p>
+            <pre>
+        let str = "123";
+        let num = Number(str);
+        console.log(num); // 123
+            </pre>
+        </section>
+
+        <section id="destructuring">
+            <h2>58. JS Destructuring</h2>
+            <p>Destructure arrays and objects to extract values:</p>
+            <pre>
+        let [a, b] = [1, 2];
+        let { name, age } = { name: "Alice", age: 25 };
+        console.log(a); // 1
+        console.log(name); // Alice
+            </pre>
+        </section>
+
+        <section id="bitwise">
+            <h2>59. JS Bitwise</h2>
+            <p>Bitwise operators perform operations on binary representations of numbers:</p>
+            <pre>
+        let x = 5; // 0101 in binary
+        let y = 3; // 0011 in binary
+        console.log(x & y); // 1 (0001 in binary)
+            </pre>
+        </section>
+
+        <section id="regexp">
+            <h2>60. JS RegExp</h2>
+            <p>Regular expressions are patterns used for matching character combinations in strings:</p>
+            <pre>
+        let regex = /hello/i;
+        console.log(regex.test("Hello World")); // true
+            </pre>
+        </section>
+
+        <section id="precedence">
+            <h2>61. JS Precedence</h2>
+            <p>Operator precedence determines the order in which operations are performed:</p>
+            <pre>
+        let result = 2 + 3 * 4;
+        console.log(result); // 14 (multiplication has higher precedence)
+            </pre>
+        </section>
+
+        <section id="errors">
+            <h2>62. JS Errors</h2>
+            <p>Handle errors using <code>try...catch</code>:</p>
+            <pre>
+        try {
+            let result = 10 / 0;
+        } catch (error) {
+            console.log("Error: " + error.message);
+        }
+            </pre>
+        </section>
+
+        <section id="scope">
+            <h2>63. JS Scope</h2>
+            <p>Scope refers to the visibility of variables. Variables declared with <code>let</code> and <code>const</code> have block scope:</p>
+            <pre>
+        {
+            let x = 10;
+        }
+        console.log(x); // Error: x is not defined
+            </pre>
+        </section>
+
+        <section id="hoisting">
+            <h2>64. JS Hoisting</h2>
+            <p>Hoisting allows variables and function declarations to be used before they are declared:</p>
+            <pre>
+        console.log(x); // undefined
+        var x = 5;
+            </pre>
+        </section>
+
+        <section id="strictMode">
+            <h2>65. JS Strict Mode</h2>
+            <p>Enable strict mode by adding <code>"use strict";</code> at the beginning of a script or function:</p>
+            <pre>
+        "use strict";
+        let x = 10;
+        // x = undeclaredVar; // Error: undeclaredVar is not defined
+            </pre>
+        </section>
+
+        <section id="this">
+            <h2>66. JS this Keyword</h2>
+            <p>The <code>this</code> keyword refers to the current object:</p>
+            <pre>
+        let person = {
+            name: "Alice",
+            greet: function() {
+                return "Hello, " + this.name;
+            }
+        };
+        console.log(person.greet()); // Hello, Alice
+            </pre>
+        </section>
+
+        <section id="arrowFunctions">
+            <h2>67. JS Arrow Functions</h2>
+            <p>Arrow functions provide a concise syntax for function expressions:</p>
+            <pre>
+        let add = (a, b) => a + b;
+        console.log(add(2, 3)); // 5
+            </pre>
+        </section>
+
+        <section id="classes">
+            <h2>68. JS Classes</h2>
+            <p>Classes are templates for creating objects with shared properties and methods:</p>
+            <pre>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                return "Hello, " + this.name;
+            }
+        }
+        let john = new Person("John", 30);
+        console.log(john.greet()); // Hello, John
+            </pre>
+        </section>
+
+        <section id="modules">
+            <h2>69. JS Modules</h2>
+            <p>Modules allow you to import and export code between files:</p>
+            <pre>
+        // math.js
+        export function add(a, b) {
+            return a + b;
+        }
+        // main.js
+        import { add } from './math.js';
+        console.log(add(2, 3)); // 5
+            </pre>
+        </section>
+
+        <section id="json">
+            <h2>70. JS JSON</h2>
+            <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format:</p>
+            <pre>
+        let obj = { name: "Alice", age: 30 };
+        let json = JSON.stringify(obj);
+        console.log(json); // {"name":"Alice","age":30}
+            </pre>
+        </section>
+
+        <section id="debugging">
+            <h2>71. JS Debugging</h2>
+            <p>Use the <code>debugger</code> statement to pause execution and inspect values:</p>
+            <pre>
+        function add(a, b) {
+            debugger;
+            return a + b;
+        }
+        console.log(add(2, 3)); // 5
+            </pre>
+        </section>
+
+        <section id="styleGuide">
+            <h2>72. JS Style Guide</h2>
+            <p>Follow coding conventions for readability and maintainability:</p>
+            <pre>
+        let firstName = "Alice"; // Camel case for variables
+        function sayHello(name) {
+            return `Hello, ${name}`;
+        }
+            </pre>
+        </section>
+
+        <section id="bestPractices">
+            <h2>73. JS Best Practices</h2>
+            <p>Adopt best practices for writing clean and efficient code:</p>
+            <pre>
+        function sum(a, b) {
+            return a + b;
+        }
+        console.log(sum(5, 10)); // 15
+            </pre>
+        </section>
+
+        <section id="mistakes">
+            <h2>74. JS Mistakes</h2>
+            <p>Avoid common mistakes such as omitting <code>return</code> statements or using undeclared variables:</p>
+            <pre>
+        function multiply(a, b) {
+            return a * b; // Ensure return statement is present
+        }
+        console.log(multiply(2, 3)); // 6
+            </pre>
+        </section>
+
+        <section id="performance">
+            <h2>75. JS Performance</h2>
+            <p>Optimize code for better performance, such as avoiding unnecessary computations:</p>
+            <pre>
+        let numbers = [1, 2, 3, 4, 5];
+        let sum = numbers.reduce((total, num) => total + num, 0);
+        console.log(sum); // 15
+            </pre>
+        </section>
+
+        <section id="reservedWords">
+            <h2>76. JS Reserved Words</h2>
+            <p>Reserved words cannot be used as identifiers. Examples include <code>class</code>, <code>return</code>, and <code>var</code>:</p>
+            <pre>
+        let class = "example"; // Error: Unexpected strict mode reserved word
+            </pre>
+        </section>
+
+              </div>
+
+<div class="interp">
+    <div >
+        <div  >
+
+          <button id="runbtn"
+          onclick="submitTryit(1);uic_r_p();">Run &#10095;</button>
+
+        </div>
+        </div>
+
+
+
+
+        <div id="container">
+
+        <div id="textareacontainer">
+        <div style="font-size:small;">Enter your code here...</div>
+        <div id="textarea">
+        <!-- <div id="textareawrapper"> -->
+
+              <textarea id="textareaCode">
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Sample Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;script&gt;
+<!-- JavaScript can be in between &lt;script&gt; tags -->
+
+&lt;/script&gt;
+&lt;/html&gt;
+        </textarea>
+              <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+                <input type="hidden" name="code" id="code" />
+              </form>
+
+         </div>
+        </div>
+        </div>
+        <div style=" font-size:small;">
+        Output
+        </div>
+        <div  id="iframecontainer " >
+
+        <div style="height: 200px;width: 360px;color: rgb(17, 17, 18); background-color: rgb(231 218 218); margin-bottom:10px ;" id="iframe">
+
+          <div id="runloadercontainer"><div id="runloader"></div></div>
+
+
+        <div id="iframewrapper">
+
+          <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
+
+          </div>
+              <div>
+                Hello, World!
+
+              </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+
+        </div>
+        <script>
+            function submitTryit(n) {
+
+              if (window.editor) {
+                window.editor.save();
+              }
+
+            var text = document.getElementById("textareaCode").value;
+
+            var ifr = document.createElement("iframe");
+            ifr.width = '100%';
+            ifr.height = '100%';
+
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            ifr.setAttribute("name", "iframeResult");
+
+            ifr.setAttribute("allowfullscreen", "true");
+
+            document.getElementById("iframewrapper").innerHTML = "";
+            document.getElementById("iframewrapper").appendChild(ifr);
+
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+            //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+            //(and back to false to prevent the content from being editable)
+            //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)
+            if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+              ifrw.document.body.contentEditable = true;
+              ifrw.document.body.contentEditable = false;
+            }
+
+            }
+
+            function hideSpinner() {
+            document.getElementById("runloadercontainer").style.display = "none";
+            }
+            function displaySpinner() {
+            var i, c, w, h, r, top;
+            i = document.getElementById("iframeResult");
+            w = w3_getStyleValue(i, "width");
+            h = w3_getStyleValue(i, "height");
+            c = document.getElementById("runloadercontainer");
+            c.style.width = w;
+            c.style.height = h;
+            c.style.display = "block";
+            w = Number(w.replace("px", "")) / 5;
+            r = document.getElementById("runloader");
+            r.style.width = w + "px";
+            r.style.height = w + "px";
+            h = w3_getStyleValue(r, "height");
+            h = Number(h.replace("px", "")) / 2;
+            top = w3_getStyleValue(c, "height");
+            top = Number(top.replace("px", "")) / 2;
+            top = top - h
+            r.style.top = top + "px";
+            }
+
+            var currentStack=true;
+            if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+            function restack(horizontal) {
+              var tc, ic, t, i, c, f, sv, sh, d, b, height, flt, width;
+              tc = document.getElementById("textareacontainer");
+              ic = document.getElementById("iframecontainer");
+              t = document.getElementById("textarea");
+              i = document.getElementById("iframe");
+              c = document.getElementById("container");
+              sv = document.getElementById("stackV");
+              sh = document.getElementById("stackH");
+              b = document.getElementsByClassName("localhostoutercontainer");
+              tc.className = tc.className.replace("horizontal", "");
+              ic.className = ic.className.replace("horizontal", "");
+              t.className = t.className.replace("horizontal", "");
+              i.className = i.className.replace("horizontal", "");
+              c.className = c.className.replace("horizontal", "");
+              if (b[0]) {b[0].className = b[0].className.replace("horizontal", "")};
+              if (sv) {sv.className = sv.className.replace("horizontal", "")};
+              if (sv) {sh.className = sh.className.replace("horizontal", "")};
+              stack = "";
+              if (horizontal) {
+                  tc.className = tc.className + " horizontal";
+                  ic.className = ic.className + " horizontal";
+                  t.className = t.className + " horizontal";
+                  i.className = i.className + " horizontal";
+                  c.className = c.className + " horizontal";
+                  if (sv) {sv.className = sv.className + " horizontal"};
+                  if (sv) {sh.className = sh.className + " horizontal"};
+                  if (b[0]) {b[0].className = b[0].className + " horizontal"};
+                  stack = " horizontal";
+                  document.getElementById("textareacontainer").style.height = "50%";
+                  document.getElementById("iframecontainer").style.height = "50%";
+                  document.getElementById("textareacontainer").style.width = "100%";
+                  document.getElementById("iframecontainer").style.width = "100%";
+                  currentStack=false;
+              } else {
+                  document.getElementById("textareacontainer").style.height = "100%";
+                  document.getElementById("iframecontainer").style.height = "100%";
+                  document.getElementById("textareacontainer").style.width = "50%";
+                  document.getElementById("iframecontainer").style.width = "50%";
+                  currentStack=true;
+              }
+              fixDragBtn();
+              showFrameSize();
+
+            }
+
+
+
+
+            function w3_getStyleValue(elmnt,style) {
+              if (window.getComputedStyle) {
+                  return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+              } else {
+                  return elmnt.currentStyle[style];
+              }
+            }
+
+
+            </script>
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+                </div>
+
+            </div>
+  </div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<footer>
+<h5>you can add your data here in the footer section</h5>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,750 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page with Header, Footer, Sidebar, and Content</title>
+  <link rel="stylesheet" href="{% static 'lololocss.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'logo.png' %}" alt="Loading..." height="90" width="180">
+        <div class="head">C++</div>
+
+    </header>
+
+
+
+
+    <div class="heading">
+
+        <div style="margin-left: 20%;cursor: pointer;  text-decoration: underline;" id="toggle-sidebar">c++ tutorials</div>
+        <script>
+            const button = document.getElementById('toggle-sidebar');
+            button.addEventListener('click', () => {
+                document.body.classList.toggle('sidebar-visible');
+            });
+        </script>
+    </div>
+    <aside>
+        <script>
+            function scrollToSection(sectionId) {
+              document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+            </script>
+
+        <div class='hover-button' onclick="scrollToSection('home')">C++ HOME</div>
+        <div class='hover-button' onclick="scrollToSection('intro')">C++ Intro</div>
+        <div class='hover-button' onclick="scrollToSection('getStarted')">C++ Get Started</div>
+        <div class='hover-button' onclick="scrollToSection('syntax')">C++ Syntax</div>
+        <div class='hover-button' onclick="scrollToSection('output')">C++ Output</div>
+        <div class='hover-button' onclick="scrollToSection('comments')">C++ Comments</div>
+        <div class='hover-button' onclick="scrollToSection('variables')">C++ Variables</div>
+        <div class='hover-button' onclick="scrollToSection('userInput')">C++ User Input</div>
+        <div class='hover-button' onclick="scrollToSection('dataTypes')">C++ Data Types</div>
+        <div class='hover-button' onclick="scrollToSection('operators')">C++ Operators</div>
+        <div class='hover-button' onclick="scrollToSection('strings')">C++ Strings</div>
+        <div class='hover-button' onclick="scrollToSection('math')">C++ Math</div>
+        <div class='hover-button' onclick="scrollToSection('booleans')">C++ Booleans</div>
+        <div class='hover-button' onclick="scrollToSection('conditions')">C++ Conditions</div>
+        <div class='hover-button' onclick="scrollToSection('switch')">C++ Switch</div>
+        <div class='hover-button' onclick="scrollToSection('whileLoop')">C++ While Loop</div>
+        <div class='hover-button' onclick="scrollToSection('forLoop')">C++ For Loop</div>
+        <div class='hover-button' onclick="scrollToSection('breakContinue')">C++ Break/Continue</div>
+        <div class='hover-button' onclick="scrollToSection('arrays')">C++ Arrays</div>
+        <div class='hover-button' onclick="scrollToSection('structures')">C++ Structures</div>
+        <div class='hover-button' onclick="scrollToSection('enums')">C++ Enums</div>
+        <div class='hover-button' onclick="scrollToSection('references')">C++ References</div>
+        <div class='hover-button' onclick="scrollToSection('pointers')">C++ Pointers</div>
+    </div>
+
+    </aside>
+
+    <div class="main-content">
+        <div class="content">
+                    <h2 id="intro">C++ Introduction</h2>
+                    <p>C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language. It is widely used for system/software development, game development, drivers, client-server applications, and embedded firmware.</p>
+
+                <h2 id="getStarted">Get Started</h2>
+                <p>To get started with C++, you need to set up an environment that allows you to write and execute C++ code. You can use an Integrated Development Environment (IDE) like Visual Studio, Code::Blocks, or a simple text editor like Visual Studio Code combined with a compiler like GCC (GNU Compiler Collection).</p>
+
+
+
+                <h2 id="syntax">C++ Syntax</h2>
+                <p>C++ syntax is quite similar to C but with additional features. Here's a simple example of a C++ program:</p>
+                <pre><code>
+            #include &lt;iostream&gt;  // Preprocessor directive for input-output stream
+
+            int main() {
+                std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;  // Print Hello, World!
+                return 0;  // Return 0 to indicate that the program ended successfully
+            }
+                </code></pre>
+
+                <h2 id="output">Output</h2>
+                <p>To output text in C++, you use the <code>std::cout</code> object along with the insertion operator <code>&lt;&lt;</code>.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+                return 0;
+            }
+                </code></pre>
+
+
+                <h2 id="comments">Comments</h2>
+                <p>Comments are used to explain code and make it more readable. There are two types of comments in C++:</p>
+                <ul>
+                    <li>Single-line comments: Start with <code>//</code></li>
+                    <li>Multi-line comments: Enclosed in <code>/* ... */</code></li>
+                </ul>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                // This is a single-line comment
+                std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl; /* This is a multi-line comment */
+                return 0;
+            }
+                </code></pre>
+
+
+                <h2 id="variables">Variables</h2>
+                <p>Variables are containers for storing data values. In C++, you must declare a variable before you can use it.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int myNum = 15;  // Integer (whole number)
+                double myFloatNum = 5.99;  // Floating point number
+                char myLetter = 'D';  // Character
+                std::string myText = "Hello";  // String (text)
+                bool myBoolean = true;  // Boolean (true/false)
+                std::cout &lt;&lt; myNum &lt;&lt; std::endl;
+                std::cout &lt;&lt; myFloatNum &lt;&lt; std::endl;
+                std::cout &lt;&lt; myLetter &lt;&lt; std::endl;
+                std::cout &lt;&lt; myText &lt;&lt; std::endl;
+                std::cout &lt;&lt; myBoolean &lt;&lt; std::endl;
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="userInput">User Input</h2>
+                <p>You can use the <code>std::cin</code> object to get user input in C++.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int myNum;
+                std::cout &lt;&lt; "Enter a number: ";
+                std::cin &gt;&gt; myNum;
+                std::cout &lt;&lt; "You entered: " &lt;&lt; myNum &lt;&lt; std::endl;
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="dataTypes">Data Types</h2>
+                <p>C++ provides several data types for different kinds of variables.</p>
+                <ul>
+                    <li><code>int</code>: Integer</li>
+                    <li><code>float</code>: Floating point number</li>
+                    <li><code>double</code>: Double-precision floating point number</li>
+                    <br>
+                    <li><code>char</code>: Character</li>
+                    <li><code>bool</code>: Boolean</li>
+                    <li><code>string</code>: String (text)</li>
+                </ul>
+
+                <h2 id="operators">Operators</h2>
+                <p>Operators are used to perform operations on variables and values. Examples include:</p>
+                <ul>
+                    <li>Arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+                    <br>
+                    <li>Comparison operators: <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></li>
+                    <br>
+                    <li>Logical operators: <code>&&</code>, <code>||</code>, <code>!</code></li>
+                </ul>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int x = 5;
+                int y = 10;
+                std::cout &lt;&lt; (x + y) &lt;&lt; std::endl;  // Addition
+                std::cout &lt;&lt; (x == y) &lt;&lt; std::endl;  // Comparison
+                std::cout &lt;&lt; (x &lt; y &amp;&amp; x &gt; 0) &lt;&lt; std::endl;  // Logical AND
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="strings">Strings</h2>
+                <p>Strings in C++ are used to store text. The standard library provides a <code>string</code> class for handling strings.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+            #include &lt;string&gt;
+
+            int main() {
+                std::string greeting = "Hello";
+                std::cout &lt;&lt; greeting &lt;&lt; std::endl;
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="math">Math</h2>
+                <p>C++ provides a <code>&lt;cmath&gt;</code> library for common mathematical functions.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+            #include &lt;cmath&gt;
+
+            int main() {
+                std::cout &lt;&lt; std::sqrt(16) &lt;&lt; std::endl;  // Square root
+                std::cout &lt;&lt; std::pow(2, 3) &lt;&lt; std::endl;  // Power
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="booleans">Booleans</h2>
+                <p>Booleans represent two values: <code>true</code> and <code>false</code>.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                bool isCodingFun = true;
+                bool isFishTasty = false;
+                std::cout &lt;&lt; isCodingFun &lt;&lt; std::endl;  // Outputs 1 (true)
+                std::cout &lt;&lt; isFishTasty &lt;&lt; std::endl;  // Outputs 0 (false)
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="conditions">Conditions</h2>
+                <p>Conditional statements are used to perform different actions based on different conditions. The <code>if</code> statement is the most basic conditional statement in C++.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                if (5 &gt; 2) {
+                    std::cout &lt;&lt; "5 is greater than 2." &lt;&lt; std::endl;
+                }
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="switch">Switch</h2>
+                <p>The <code>switch</code> statement allows a variable to be tested for equality against a list of values.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int day = 4;
+                switch (day) {
+                    case 1:
+                        std::cout &lt;&lt; "Monday" &lt;&lt; std::endl;
+                        break;
+                    case 2:
+                        std::cout &lt;&lt; "Tuesday" &lt;&lt; std::endl;
+                        break;
+                    case 3:
+                        std::cout &lt;&lt; "Wednesday" &lt;&lt; std::endl;
+                        break;
+                    case 4:
+                        std::cout &lt;&lt; "Thursday" &lt;&lt; std::endl;
+                        break;
+                    case 5:
+                        std::cout &lt;&lt; "Friday" &lt;&lt; std::endl;
+                        break;
+                    case 6:
+                        std::cout &lt;&lt; "Saturday" &lt;&lt; std::endl;
+                        break;
+                    case 7:
+                        std::cout &lt;&lt; "Sunday" &lt;&lt; std::endl;
+                        break;
+                    default:
+                        std::cout &lt;&lt; "Invalid day" &lt;&lt; std::endl;
+                }
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="whileLoop">While Loop</h2>
+                <p>A <code>while</code> loop repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int i = 0;
+                while (i &lt; 5) {
+                    std::cout &lt;&lt; i &lt;&lt; std::endl;
+                    i++;
+                }
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="forLoop">For Loop</h2>
+                <p>A <code>for</code> loop is a more compact version of the <code>while</code> loop. It includes the initialization, condition, and increment/decrement in one line.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                for (int i = 0; i &lt; 5; i++) {
+                    std::cout &lt;&lt; i &lt;&lt; std::endl;
+                }
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="breakContinue">Break and Continue</h2>
+                <p>The <code>break</code> statement terminates the loop, and the <code>continue</code> statement skips the current iteration and moves to the next one.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                for (int i = 0; i &lt; 10; i++) {
+                    if (i == 4) {
+                        break;  // Terminate the loop if i is 4
+                    }
+                    if (i == 2) {
+                        continue;  // Skip the iteration if i is 2
+                    }
+                    std::cout &lt;&lt; i &lt;&lt; std::endl;
+                }
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="arrays">Arrays</h2>
+                <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int numbers[] = {1, 2, 3, 4, 5};
+                for (int i = 0; i &lt; 5; i++) {
+                    std::cout &lt;&lt; numbers[i] &lt;&lt; std::endl;
+                }
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="structures">Structures</h2>
+                <p>Structures (structs) are used to group variables of different data types under a single name.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+            #include &lt;string&gt;
+
+            struct Person {
+                std::string name;
+                int age;
+            };
+
+            int main() {
+                Person person1;
+                person1.name = "John";
+                person1.age = 30;
+                std::cout &lt;&lt; person1.name &lt;&lt; " is " &lt;&lt; person1.age &lt;&lt; " years old." &lt;&lt; std::endl;
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="enums">Enums</h2>
+                <p>Enums are user-defined types that consist of a set of named integral constants, called enumerators.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            enum Color {RED, GREEN, BLUE};
+
+            int main() {
+                Color myColor = GREEN;
+                if (myColor == GREEN) {
+                    std::cout &lt;&lt; "My favorite color is green." &lt;&lt; std::endl;
+                }
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="references">References</h2>
+                <p>References are an alternative to pointers that provide a way to refer to the same variable by another name.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int a = 10;
+                int &amp;ref = a;
+                ref++;
+                std::cout &lt;&lt; "a: " &lt;&lt; a &lt;&lt; std::endl;  // Outputs 11
+                std::cout &lt;&lt; "ref: " &lt;&lt; ref &lt;&lt; std::endl;  // Outputs 11
+                return 0;
+            }
+                </code></pre>
+
+                <h2 id="pointers">Pointers</h2>
+                <p>Pointers are variables that store memory addresses of other variables.</p>
+                <pre><code>
+            #include &lt;iostream&gt;
+
+            int main() {
+                int var = 20;
+                int *ptr = &amp;var;
+                std::cout &lt;&lt; "Value of var: " &lt;&lt; var &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Address of var: " &lt;&lt; ptr &lt;&lt; std::endl;
+                std::cout &lt;&lt; "Value pointed by ptr: " &lt;&lt; *ptr &lt;&lt; std::endl;
+                return 0;
+            }
+                </code></pre>
+    </div>
+
+<div class="interp">
+    <div >
+        <div  >
+
+          <button id="runbtn"
+          onclick="submitTryit(1);uic_r_p();">Run &#10095;</button>
+
+        </div>
+        </div>
+
+
+
+
+        <div id="container">
+
+        <div id="textareacontainer">
+        <div style="font-size:small;">Enter your code here...</div>
+        <div id="textarea">
+        <div id="textareawrapper">
+
+              <textarea id="textareaCode">
+#include <iostream>
+     int main() {  // This is a single-line comment
+         std::cout << "Hello, World!" << std::endl; /* This is a multi-line comment */
+         return 0;
+                 }
+        </textarea>
+              <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+                <input type="hidden" name="code" id="code" />
+              </form>
+
+         </div>
+        </div>
+        </div>
+        <div style=" font-size:small;">
+        Output
+        </div>
+        <div  id="iframecontainer " >
+
+        <div style="height: 200px;width: 360px;color: aliceblue; background-color: rgb(31, 30, 30); margin-bottom:10px ;" id="iframe">
+
+          <div id="runloadercontainer"><div id="runloader"></div></div>
+
+
+        <div id="iframewrapper">
+
+          <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
+
+          </div>
+              <div>
+                Hello, World!
+
+              </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+
+        </div>
+        <script>
+
+       function submitTryit(n) {
+
+  if (window.editor) {
+    window.editor.save();
+  }
+
+var text = document.getElementById("textareaCode").value;
+
+var ifr = document.createElement("iframe");
+ifr.width = '100%';
+ifr.height = '100%';
+ifr.setAttribute("frameborder", "0");
+ifr.setAttribute("id", "iframeResult");
+ifr.setAttribute("name", "iframeResult");
+
+document.getElementById("iframewrapper").innerHTML = "";
+document.getElementById("iframewrapper").appendChild(ifr);
+
+document.getElementById("iframeResult").addEventListener("load", hideSpinner);
+displaySpinner();
+var t=text;
+t=t.replace(/=/gi,"w3equalsign");
+t=t.replace(/\+/gi,"w3plussign");
+var pos=t.search(/script/i)
+while (pos>0) {
+  t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
+  pos=t.search(/script/i);
+}
+
+document.getElementById("code").value=t;
+
+  document.getElementById("codeForm").action = "https://try.w3schools.com/try_cpp.php?x=" + Math.random();
+
+document.getElementById('codeForm').method = "post";
+document.getElementById('codeForm').acceptCharset = "utf-8";
+document.getElementById('codeForm').target = "iframeResult";
+document.getElementById("codeForm").submit();
+
+}
+
+function hideSpinner() {
+document.getElementById("runloadercontainer").style.display = "none";
+}
+function displaySpinner() {
+var i, c, w, h, r, top;
+i = document.getElementById("iframeResult");
+w = w3_getStyleValue(i, "width");
+h = w3_getStyleValue(i, "height");
+c = document.getElementById("runloadercontainer");
+c.style.width = w;
+c.style.height = h;
+c.style.display = "block";
+w = Number(w.replace("px", "")) / 5;
+r = document.getElementById("runloader");
+r.style.width = w + "px";
+r.style.height = w + "px";
+h = w3_getStyleValue(r, "height");
+h = Number(h.replace("px", "")) / 2;
+top = w3_getStyleValue(c, "height");
+top = Number(top.replace("px", "")) / 2;
+top = top - h
+r.style.top = top + "px";
+}
+
+var currentStack=true;
+if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+function restack(horizontal) {
+  var tc, ic, t, i, c, f, sv, sh, d, b, height, flt, width;
+  tc = document.getElementById("textareacontainer");
+  ic = document.getElementById("iframecontainer");
+  t = document.getElementById("textarea");
+  i = document.getElementById("iframe");
+  c = document.getElementById("container");
+  sv = document.getElementById("stackV");
+  sh = document.getElementById("stackH");
+  b = document.getElementsByClassName("localhostoutercontainer");
+  tc.className = tc.className.replace("horizontal", "");
+  ic.className = ic.className.replace("horizontal", "");
+  t.className = t.className.replace("horizontal", "");
+  i.className = i.className.replace("horizontal", "");
+  c.className = c.className.replace("horizontal", "");
+  if (b[0]) {b[0].className = b[0].className.replace("horizontal", "")};
+  if (sv) {sv.className = sv.className.replace("horizontal", "")};
+  if (sv) {sh.className = sh.className.replace("horizontal", "")};
+  stack = "";
+  if (horizontal) {
+      tc.className = tc.className + " horizontal";
+      ic.className = ic.className + " horizontal";
+      t.className = t.className + " horizontal";
+      i.className = i.className + " horizontal";
+      c.className = c.className + " horizontal";
+      if (sv) {sv.className = sv.className + " horizontal"};
+      if (sv) {sh.className = sh.className + " horizontal"};
+      if (b[0]) {b[0].className = b[0].className + " horizontal"};
+      stack = " horizontal";
+      document.getElementById("textareacontainer").style.height = "50%";
+      document.getElementById("iframecontainer").style.height = "50%";
+      document.getElementById("textareacontainer").style.width = "100%";
+      document.getElementById("iframecontainer").style.width = "100%";
+      currentStack=false;
+  } else {
+      document.getElementById("textareacontainer").style.height = "100%";
+      document.getElementById("iframecontainer").style.height = "100%";
+      document.getElementById("textareacontainer").style.width = "50%";
+      document.getElementById("iframecontainer").style.width = "50%";
+      currentStack=true;
+  }
+  fixDragBtn();
+  showFrameSize();
+
+}
+function showFrameSize() {
+var t;
+var width, height;
+width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
+height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
+}
+var dragging = false;
+var stack;
+function fixDragBtn() {
+var textareawidth, leftpadding, dragleft, containertop, buttonwidth
+var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+if (stack != " horizontal") {
+  document.getElementById("dragbar").style.width = "5px";
+  textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
+  leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
+  buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
+  textareaheight = w3_getStyleValue(document.getElementById("textareawrapper"), "height");
+  dragleft = textareasize + leftpadding + (leftpadding / 2) - (buttonwidth / 2);
+  document.getElementById("dragbar").style.top = containertop + "px";
+  document.getElementById("dragbar").style.left = dragleft + "px";
+  document.getElementById("dragbar").style.height = textareaheight;
+  document.getElementById("dragbar").style.cursor = "col-resize";
+
+} else {
+  document.getElementById("dragbar").style.height = "5px";
+  if (window.getComputedStyle) {
+      textareawidth = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("height");
+      textareaheight = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("width");
+      leftpadding = window.getComputedStyle(document.getElementById("textarea"),null).getPropertyValue("padding-top");
+      buttonwidth = window.getComputedStyle(document.getElementById("dragbar"),null).getPropertyValue("height");
+  } else {
+      dragleft = document.getElementById("textareawrapper").currentStyle["width"];
+  }
+  textareawidth = Number(textareawidth.replace("px", ""));
+  leftpadding = Number(leftpadding .replace("px", ""));
+  buttonwidth = Number(buttonwidth .replace("px", ""));
+  dragleft = containertop + textareawidth + leftpadding + (leftpadding / 2);
+  document.getElementById("dragbar").style.top = dragleft + "px";
+  document.getElementById("dragbar").style.left = "5px";
+  document.getElementById("dragbar").style.width = textareaheight;
+  document.getElementById("dragbar").style.cursor = "row-resize";
+}
+}
+function dragstart(e) {
+e.preventDefault();
+dragging = true;
+var main = document.getElementById("iframecontainer");
+}
+function dragmove(e) {
+if (dragging)
+{
+  document.getElementById("shield").style.display = "block";
+  if (stack != " horizontal") {
+    var percentage = (e.pageX / window.innerWidth) * 100;
+    if (percentage > 5 && percentage < 98) {
+      var mainPercentage = 100-percentage;
+      document.getElementById("textareacontainer").style.width = percentage + "%";
+      document.getElementById("iframecontainer").style.width = mainPercentage + "%";
+      fixDragBtn();
+    }
+  } else {
+    var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+    var percentage = ((e.pageY - containertop + 20) / (window.innerHeight - containertop + 20)) * 100;
+    if (percentage > 5 && percentage < 98) {
+      var mainPercentage = 100-percentage;
+      document.getElementById("textareacontainer").style.height = percentage + "%";
+      document.getElementById("iframecontainer").style.height = mainPercentage + "%";
+      fixDragBtn();
+    }
+  }
+  showFrameSize();
+
+
+}
+}
+function dragend() {
+document.getElementById("shield").style.display = "none";
+dragging = false;
+var vend = navigator.vendor;
+if (window.editor && vend.indexOf("Apple") == -1) {
+    window.editor.refresh();
+}
+}
+if (window.addEventListener) {
+document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
+document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
+window.addEventListener("mousemove", function(e) {dragmove(e);});
+window.addEventListener("touchmove", function(e) {dragmove(e);});
+window.addEventListener("mouseup", dragend);
+window.addEventListener("touchend", dragend);
+window.addEventListener("load", fixDragBtn);
+window.addEventListener("load", showFrameSize);
+
+}
+
+function retheme() {
+var cc = document.body.className;
+if (cc.indexOf("darktheme") > -1) {
+  document.body.className = cc.replace("darktheme", "");
+  if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+  localStorage.setItem("preferredmode", "light");
+} else {
+  document.body.className += " darktheme";
+  if (opener) {opener.document.body.className += " darktheme";}
+  localStorage.setItem("preferredmode", "dark");
+}
+}
+(
+function setThemeMode() {
+var x = localStorage.getItem("preferredmode");
+if (x == "dark") {
+  document.body.className += " darktheme";
+}
+})();
+function colorcoding() {
+var ua = navigator.userAgent;
+//Opera Mini refreshes the page when trying to edit the textarea.
+if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+mode: "text/x-c++src",
+lineWrapping: true,
+smartIndent: false,
+htmlMode: true,
+autocorrect: false,
+addModeClass: true,
+
+
+  //mode: "text/x-c++src",
+  //lineWrapping: true,
+  //smartIndent: false
+
+});
+//  window.editor.on("change", function () {window.editor.save();});
+}
+
+colorcoding();
+
+
+function clickTab(x) {
+
+return false;
+
+}
+
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+      return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+      return elmnt.currentStyle[style];
+  }
+}
+</script>
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+                </div>
+
+            </div>
+  </div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<footer>
+<h5>you can add your data here in the footer section</h5>
+</footer>
+
+
+</body>
+</html>

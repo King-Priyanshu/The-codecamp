@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page with Header, Footer, Sidebar, and Content</title>
+  <link rel="stylesheet" href="{% static "lololocss.css" %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'logo.png' %}" alt="cuming soon" height="90" width="180">
+        <div class="head">Python</div>
+
+    </header>
+
+
+
+
+    <div class="heading">
+
+        <div style="margin-left: 20%;cursor: pointer;text-decoration: underline;" id="toggle-sidebar">Python tutorials</div>
+        <script>
+            const button = document.getElementById('toggle-sidebar');
+            button.addEventListener('click', () => {
+                document.body.classList.toggle('sidebar-visible');
+            });
+        </script>
+    </div>
+    <aside>
+        <script>
+            function scrollToSection(sectionId) {
+              document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+            </script>
+
+        <div>    Python HOME</div>
+        <script>
+            const move = document.getElementById('show');
+            button.addEventListener('', () => {
+                document.body.classList.toggle('show');
+            });
+        </script>
+        <div onclick="scrollToSection('getStarted')" class="hover-button"id="show">Python Get Started</div>
+        <div onclick="scrollToSection('intro')" class="hover-button"id="show">Python Intro</div>
+        <div onclick="scrollToSection('syntax')" class="hover-button"id="show">Python Syntax</div>
+        <div onclick="scrollToSection('comments')" class="hover-button"id="show">Python Comments</div>
+        <div onclick="scrollToSection('variable')" class="hover-button"id="show">Python Variables</div>
+        <div onclick="scrollToSection('dataType')" class="hover-button"id="show">Python Data Types</div>
+        <div onclick="scrollToSection('numbers')" class="hover-button"id="show">Python Numbers</div>
+        <div onclick="scrollToSection('casting')" class="hover-button"id="show">Python Casting</div>
+        <div onclick="scrollToSection('strings')" class="hover-button"id="show">Python Strings</div>
+        <div onclick="scrollToSection('booleans')" class="hover-button"id="show">Python Booleans</div>
+        <div onclick="scrollToSection('operators')" class="hover-button"id="show">Python Operators</div>
+        <div onclick="scrollToSection('lists')" class="hover-button"id="show">Python Lists</div>
+        <div onclick="scrollToSection('tuples')" class="hover-button"id="show">Python Tuples</div>
+        <div onclick="scrollToSection('sets')" class="hover-button"id="show">Python Sets</div>
+        <div onclick="scrollToSection('dictionaries')" class="hover-button"id="show">Python Dictionaries</div>
+        <div onclick="scrollToSection('ifElse')" class="hover-button"id="show">Python If...Else</div>
+        <div onclick="scrollToSection('whileLoops')" class="hover-button"id="show">Python While Loops</div>
+        <div onclick="scrollToSection('forLoops')" class="hover-button"id="show">Python For Loops</div>
+        <div onclick="scrollToSection('functions')" class="hover-button"id="show">Python Functions</div>
+        <div onclick="scrollToSection('lambda')" class="hover-button"id="show">Python Lambda</div>
+        <div onclick="scrollToSection('arrays')" class="hover-button"id="show">Python Arrays</div>
+        <div onclick="scrollToSection('classes')" class="hover-button"id="show">Python Classes/Objects</div>
+        <div onclick="scrollToSection('inheritance')" class="hover-button"id="show">Python Inheritance</div>
+        <div onclick="scrollToSection('iterators')" class="hover-button"id="show">Python Iterators</div>
+        <div onclick="scrollToSection('polymorphism')" class="hover-button"id="show">Python Polymorphism</div>
+        <div onclick="scrollToSection('scope')" class="hover-button"id="show">Python Scope</div>
+        <div onclick="scrollToSection('modules')" class="hover-button"id="show">Python Modules</div>
+        <div onclick="scrollToSection('dates')" class="hover-button"id="show">Python Dates</div>
+        <div onclick="scrollToSection('math')" class="hover-button"id="show">Python Math</div>
+        <div onclick="scrollToSection('json')" class="hover-button"id="show">Python JSON</div>
+        <div onclick="scrollToSection('regex')" class="hover-button"id="show">Python RegEx</div>
+        <div onclick="scrollToSection('pip')" class="hover-button"id="show">Python PIP</div>
+        <div onclick="scrollToSection('tryExcept')" class="hover-button"id="show">Python Try...Except</div>
+        <div onclick="scrollToSection('userInput')" class="hover-button"id="show">Python User Input</div>
+        <div onclick="scrollToSection('stringFormatting')" class="hover-button"id="show">Python String Formatting</div>
+    </div>
+
+    </aside>
+
+    <div class="main-content">
+        <div class="content">
+
+            <h2>Python HOME</h2>
+            <p>Welcome to Python programming! Python is a popular programming language known for its simplicity and readability.</p>
+
+            <h2 id="getStarted">Python Get Started</h2>
+            <p>To get started with Python, you need to install it on your computer. Visit the official <a href="https://www.python.org/downloads/">Python Downloads</a> page to download and install Python.</p>
+
+            <h2 id="intro">Python Intro</h2>
+            <p>Python is a high-level, interpreted programming language with dynamic semantics. It is used for web development, data analysis, artificial intelligence, and more.</p>
+
+            <h2 id="syntax">Python Syntax</h2>
+            <p>Python syntax is clean and easy to understand. Here is a basic example:</p>
+            <pre>
+                <code>
+                    # This is a comment
+                    print("Hello, World!")
+                </code>
+            </pre>
+
+            <h2 id="comments">Python Comments</h2>
+            <p>Comments are used to explain code. Single-line comments start with a <code>#</code>:</p>
+            <pre>
+                <code>
+                    # This is a single-line comment
+                </code>
+            </pre>
+
+            <h2 id="variable">Python Variables</h2>
+            <p>Variables are used to store data. You do not need to declare variables before using them:</p>
+            <pre>
+                <code>
+                    x = 5
+                    y = "Hello, World!"
+                </code>
+            </pre>
+
+            <h2 id="dataType">Python Data Types</h2>
+            <p>Python supports various data types such as integers, floats, strings, and booleans...</p>
+
+            <pre>
+                <code>
+                    x = 10      # Integer
+                    y = 2.5     # Float
+                    z = "Text"  # String
+                    w = True    # Boolean
+                </code>
+            </pre>
+
+            <h2 id="numbers">Python Numbers</h2>
+            <p>Python has three numerical types: int, float, and complex:</p>
+            <pre>
+                <code>
+                    x = 1      # int
+                    y = 2.8    # float
+                    z = 1j     # complex
+                </code>
+            </pre>
+
+            <h2 id="casting">Python Casting</h2>
+            <p>You can convert between data types using casting:</p>
+            <pre>
+                <code>
+                    x = int(2.8)    # Convert float to int
+                    y = float(3)    # Convert int to float
+                    z = str(10)     # Convert int to string
+                </code>
+            </pre>
+
+            <h2 id="strings">Python Strings</h2>
+            <p>Strings are arrays of bytes representing Unicode characters:</p>
+            <pre>
+                <code>
+                    text = "Hello, World!"
+                    print(text[0])   # H
+                    print(text[2:5]) # llo
+                </code>
+            </pre>
+
+            <h2 id="booleans">Python Booleans</h2>
+            <p>Booleans represent one of two values: True or False:</p>
+            <pre>
+                <code>
+                    x = True
+                    y = False
+                </code>
+            </pre>
+
+            <h2 id="operators">Python Operators</h2>
+            <p>Python supports various operators such as arithmetic, comparison, and logical operators:</p>
+            <pre>
+                <code>
+                    x = 10 + 5   # Arithmetic
+                    y = 10 > 5   # Comparison
+                    z = True and False  # Logical
+                </code>
+            </pre>
+
+            <h2 id="lists">Python Lists</h2>
+            <p>Lists are used to store multiple items in a single variable:</p>
+            <pre>
+                <code>
+                    my_list = ["apple", "banana", "cherry"]
+                    print(my_list[1])  # banana
+                </code>
+            </pre>
+
+            <h2 id="tuples">Python Tuples</h2>
+            <p>Tuples are similar to lists but are immutable:</p>
+            <pre>
+                <code>
+                    my_tuple = ("apple", "banana", "cherry")
+                    print(my_tuple[1])  # banana
+                </code>
+            </pre>
+
+            <h2 id="sets">Python Sets</h2>
+            <p>Sets are unordered collections of unique items:</p>
+            <pre>
+                <code>
+                    my_set = {"apple", "banana", "cherry"}
+                    print("apple" in my_set)  # True
+                </code>
+            </pre>
+
+            <h2 id="dictionaries">Python Dictionaries</h2>
+            <p>Dictionaries store data in key-value pairs:</p>
+            <pre>
+                <code>
+                    my_dict = {"name": "Alice", "age": 25}
+                    print(my_dict["name"])  # Alice
+                </code>
+            </pre>
+
+            <h2 id="ifElse">Python If...Else</h2>
+            <p>Conditional statements are used to perform different actions based on conditions:</p>
+            <pre>
+                <code>
+                    if x > y:
+                        print("x is greater than y")
+                    else:
+                        print("x is not greater than y")
+                </code>
+            </pre>
+
+            <h2 id="whileLoops">Python While Loops</h2>
+            <p>While loops are used to execute a block of code as long as a condition is true:</p>
+             <pre>
+                <code>
+                    i = 1
+                    while i < 6:
+                        print(i)
+                        i += 1
+                </code>
+            </pre>
+
+            <h2 id="forLoops">Python For Loops</h2>
+            <p>For loops are used to iterate over a sequence (list, tuple, dictionary, set, or string):</p>
+            <pre>
+                <code>
+                    for x in my_list:
+                        print(x)
+                </code>
+            </pre>
+
+            <h2 id="functions">Python Functions</h2>
+            <p>Functions are blocks of code that only run when called:</p>
+            <pre>
+                <code>
+                    def my_function():
+                        print("Hello from a function")
+
+                    my_function()
+                </code>
+            </pre>
+
+            <h2 id="lambda">Python Lambda</h2>
+            <p>Lambda functions are small anonymous functions:</p>
+            <pre>
+                <code>
+                    x = lambda a, b: a + b
+                    print(x(5, 6))  # 11
+                </code>
+            </pre>
+
+            <h2 id="arrays">Python Arrays</h2>
+            <p>Arrays are used to store multiple values in a single variable:</p>
+            <pre>
+                <code>
+                    import array as arr
+                    my_array = arr.array('i', [1, 2, 3, 4])
+                    print(my_array[1])  # 2
+                </code>
+            </pre>
+
+            <h2 id="classes">Python Classes/Objects</h2>
+            <p>Python is an object-oriented programming language:</p>
+            <pre>
+                <code>
+                    class MyClass:
+                        def __init__(self, name):
+                            self.name = name
+
+                        def greet(self):
+                            print(f"Hello, {self.name}")
+
+                    obj = MyClass("Alice")
+                    obj.greet()  # Hello, Alice
+                </code>
+            </pre>
+            <h2 id="inheritance">Python Inheritance</h2>
+            <p>Inheritance allows us to define a class that inherits all the methods and properties from another class:</p>
+            <pre>
+                <code>
+                    class Parent:
+                        def __init__(self, name):
+                            self.name = name
+
+                    class Child(Parent):
+                        def greet(self):
+                            print(f"Hello, {self.name}")
+
+                    obj = Child("Alice")
+                    obj.greet()  # Hello, Alice
+                </code>
+            </pre>
+
+            <h2 id="iterators">Python Iterators</h2>
+            <p>Iterators are used to iterate over a sequence of elements:</p>
+            <pre>
+                <code>
+                    my_list = [1, 2, 3]
+                    my_iter = iter(my_list)
+                    print(next(my_iter))  # 1
+                </code>
+            </pre>
+
+            <h2 id="polymorphism">Python Polymorphism</h2>
+            <p>Polymorphism allows us to define methods in the child class with the same name as defined in their parent class:</p>
+            <pre>
+                <code>
+                    class Animal:
+                        def sound(self):
+                            pass
+
+                    class Dog(Animal):
+                        def sound(self):
+                            return "Woof"
+
+                    class Cat(Animal):
+                        def sound(self):
+                            return "Meow"
+
+                    def make_sound(animal):
+                        print(animal.sound())
+
+                    make_sound(Dog())  # Woof
+                    make_sound(Cat())  # Meow
+                </code>
+            </pre>
+
+            <h2 id="scope">Python Scope</h2>
+            <p>Scope determines the visibility of a variable within a block of code:</p>
+            <pre>
+                <code>
+                    def my_function():
+                        x = 10  # Local scope
+
+                    x = 20  # Global scope
+                    my_function()
+                    print(x)  # 20
+                </code>
+            </pre>
+
+            <h2 id="modules">Python Modules</h2>
+            <p>Modules are files containing Python code that can be imported into other Python files:</p>
+            <pre>
+                <code>
+                    # mymodule.py
+                    def greeting(name):
+                        print(f"Hello, {name}")
+
+                    # main.py
+                    import mymodule
+                    mymodule.greeting("Alice")  # Hello, Alice
+                </code>
+            </pre>
+
+            <h2 id="dates">Python Dates</h2>
+            <p>Python has a built-in module called <code>datetime</code> to work with dates and times:</p>
+            <pre>
+                <code>
+                    import datetime
+                    x = datetime.datetime.now()
+                    print(x)  # 2024-07-20 12:34:56.789123
+                </code>
+            </pre>
+
+            <h2 id="math">Python Math</h2>
+            <p>Python has a built-in module called <code>math</code> that provides mathematical functions:</p>
+            <pre>
+                <code>
+                    import math
+                    x = math.sqrt(16)
+                    print(x)  # 4.0
+                </code>
+            </pre>
+
+            <h2 id="json">Python JSON</h2>
+            <p>Python has a built-in module called <code>json</code> to work with JSON data:</p>
+            <pre>
+                <code>
+                    import json
+                    x = '{"name": "Alice", "age": 25}'
+                    y = json.loads(x)
+                    print(y["name"])  # Alice
+                </code>
+            </pre>
+
+            <h2 id="regex">Python RegEx</h2>
+            <p>Python has a built-in module called <code>re</code> to work with regular expressions:</p>
+            <pre>
+                <code>
+                    import re
+                    txt = "The rain in Spain"
+                    x = re.search("ai", txt)
+                    print(x)  # <re.Match object; span=(5, 7), match='ai'>
+                </code>
+            </pre>
+
+            <h2 id="pip">Python PIP</h2>
+            <p>PIP is a package manager for Python packages. You can install packages using the command:</p>
+            <pre>
+                <code>
+                    pip install package_name
+                </code>
+            </pre>
+
+            <h2 id="tryExcept">Python Try...Except</h2>
+            <p>Try...except blocks are used to handle exceptions:</p>
+            <pre>
+                <code>
+                    try:
+                        x = 10 / 0
+                    except ZeroDivisionError:
+                        print("Cannot divide by zero")
+                </code>
+            </pre>
+
+            <h2 id="userInput">Python User Input</h2>
+            <p>You can get user input using the <code>input</code> function:</p>
+            <pre>
+                <code>
+                    name = input("Enter your name: ")
+                    print(f"Hello, {name}")
+                </code>
+            </pre>
+
+            <h2 id="stringFormatting">Python String Formatting</h2>
+            <p>String formatting allows you to format strings in various ways:</p>
+            <pre>
+                <code>
+                    age = 25
+                    txt = f"My name is Alice, and I am {age} years old."
+                    print(txt)  # My name is Alice, and I am 25 years old.
+                </code>
+            </pre>
+                      </div>
+
+                      <!-- interpreater -->
+
+                      <div class="interp">
+                        <div >
+                            <div  >
+
+                              <button id="runbtn"
+                              onclick="submitTryit(1);uic_r_p();">Run &#10095;</button>
+
+                            </div>
+                            </div>
+
+
+
+
+                            <div id="container">
+
+                            <div id="textareacontainer">
+                            <div style="font-size:small;">Enter your code here...</div>
+                            <div id="textarea">
+                            <div id="textareawrapper">
+
+                                  <textarea id="textareaCode">print("Hello, World!")
+                            </textarea>
+                                  <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+                                    <input type="hidden" name="code" id="code" />
+                                  </form>
+
+                             </div>
+                            </div>
+                            </div>
+                            <div style=" font-size:small;">
+                            Output
+                            </div>
+                            <div  id="iframecontainer " >
+
+                            <div style="height: 200px;width: 360px;color: aliceblue; background-color: rgb(31, 30, 30); margin-bottom:10px ;" id="iframe">
+
+                              <div id="runloadercontainer"><div id="runloader"></div></div>
+
+
+                            <div id="iframewrapper">
+
+                              <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
+
+                              </div>
+                                  <div>
+                                    Hello, World!
+
+                                  </div>
+                                </div>
+
+                            </div>
+                            </div>
+                            </div>
+
+                            </div>
+                            <script>
+
+                            function submitTryit(n) {
+
+                            if (window.editor) {
+                            window.editor.save();
+                            }
+
+                            var text = document.getElementById("textareaCode").value;
+
+                            var ifr = document.createElement("iframe");
+                            ifr.height = '200px';
+                            ifr.width = '350px';
+
+                            ifr.setAttribute("frameborder", "0");
+                            ifr.setAttribute("id", "iframeResult");
+                            ifr.setAttribute("name", "iframeResult");
+
+                            document.getElementById("iframewrapper").innerHTML = "";
+                            document.getElementById("iframewrapper").appendChild(ifr);
+
+                            document.getElementById("iframeResult").addEventListener("load", hideSpinner);
+                            displaySpinner();
+                            var t=text;
+                            t=t.replace(/=/gi,"w3equalsign");
+                            t=t.replace(/\+/gi,"w3plussign");
+                            var pos=t.search(/script/i)
+                            while (pos>0) {
+                            t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
+                            pos=t.search(/script/i);
+                            }
+
+                            document.getElementById("code").value=t;
+
+                            document.getElementById("codeForm").action = "https://try.w3schools.com/try_python.php?x=" + Math.random();
+
+                            document.getElementById('codeForm').method = "post";
+                            document.getElementById('codeForm').acceptCharset = "utf-8";
+                            document.getElementById('codeForm').target = "iframeResult";
+                            document.getElementById("codeForm").submit();
+
+                            }
+
+                            function hideSpinner() {
+                            document.getElementById("runloadercontainer").style.display = "none";
+                            }
+                            function displaySpinner() {
+                            var i, c, w, h, r, top;
+                            i = document.getElementById("iframeResult");
+                            w = w3_getStyleValue(i, "width");
+                            h = w3_getStyleValue(i, "height");
+                            c = document.getElementById("runloadercontainer");
+                            c.style.width = w;
+                            c.style.height = h;
+                            c.style.display = "block";
+                            w = Number(w.replace("px", "")) / 5;
+                            r = document.getElementById("runloader");
+                            r.style.width = w + "px";
+                            r.style.height = w + "px";
+                            h = w3_getStyleValue(r, "height");
+                            h = Number(h.replace("px", "")) / 2;
+                            top = w3_getStyleValue(c, "height");
+                            top = Number(top.replace("px", "")) / 2;
+                            top = top - h
+                            r.style.top = top + "px";
+                            }
+
+                            var currentStack=true;
+                            if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+                            //
+                            //
+                            var dragging = false;
+                            var stack;
+
+                            function clickTab(x) {
+
+                            return false;
+
+                            }
+
+                            function w3_getStyleValue(elmnt,style) {
+                            if (window.getComputedStyle) {
+                              return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+                            } else {
+                              return elmnt.currentStyle[style];
+                            }
+                            }
+
+                            </script>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                    </div>
+
+                                </div>
+                      </div>
+
+
+
+                    </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h5>you can add your data here in the footer section</h5>
+    </footer>
+
+
+</body>
+</html>
