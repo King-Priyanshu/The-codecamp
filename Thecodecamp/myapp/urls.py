@@ -25,4 +25,6 @@ urlpatterns = [
     path('cpp/', views.cpp,name="c_plus"),
     path('java/', views.java,name="java"),
     path('js/', views.js,name="js"),
+
+    path('webhook/', views.webhook,name="webhook"),
     ]
