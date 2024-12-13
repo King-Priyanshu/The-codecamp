@@ -3,8 +3,6 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
     
     background-color: #0e1d31;
 }
@@ -14,7 +12,6 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 25px;
-    margin-top: -140px;
 }
 
 .container {
@@ -75,13 +72,12 @@ body {
 .intro {
     font-weight: 200;
     font-size: medium;
-    margin-top: 10px;
-    transform: translateY(-50px);
     opacity: 0;
     animation: slideAndFadeIn 1s forwards;
     animation-delay: 2s;
     padding-left: 40px;
     color: rgb(255, 255, 255);
+    text-align: justify;
 }
 
 .button {
@@ -89,7 +85,7 @@ body {
     margin-top: 30px;
     border: none;
     background-color: rgb(244, 121, 60);
-    color: rgb(239, 235, 235);
+    color: white;
     text-align: center;
     font-size: 18px;
     padding: 12px 24px;
@@ -99,6 +95,10 @@ body {
     animation: slideAndFadeIn 1s forwards;
     animation-delay: 2.5s;
     margin-left: 70px;
+}
+
+.button:hover {
+    filter: brightness(110%);
 }
 
 @keyframes slideAndFadeIn {
@@ -133,14 +133,16 @@ body {
 /* Media queries */
 
 /* Adjustments for screens smaller than 768px (phones) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 906px) {
     .wrapper {
         flex-direction: column;
         align-items: center;
     }
 
     .introwelcome {
-        font-size: 80px;
+        font-size: 60px;
+        margin-top: 10px;
+        margin-bottom: 1px;
     }
 
     .introhello {
@@ -149,9 +151,24 @@ body {
 
     .intro,
     .button {
-        padding-left: 0;
-        text-align: center;
         margin-left: 0;
-        font-size: small;
+        font-size: medium;
+    }
+
+    .button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .introwelcome {
+        font-size: 60px;
     }
 }
