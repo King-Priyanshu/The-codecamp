@@ -2,9 +2,9 @@ body {
     background: linear-gradient(45deg, #0e1d31, #122641, #172b44, #0e76a8, #d080f6, #589df8, #0e1d31);
     background-size: 300% 300%;
     animation: gradientAnimation 15s ease infinite;
-    overflow: scroll;
+    overflow: auto;
     margin: 0;
-    padding: 0;
+    padding: 2rem;
 }
 
 @keyframes gradientAnimation {
@@ -16,12 +16,20 @@ body {
 .container {
     margin: 50px auto;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     border: 2px solid #fff;
     border-radius: 25px;
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.5);
-    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+    gap: 50px;
+    width: 60%;
+}
+
+.languageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .button {
@@ -33,12 +41,14 @@ body {
     color: #f0e9e9;
     font-size: 16px;
     outline: none;
-    margin-left: -50%;
-    margin-bottom: 50px;
+}
+
+.button:hover {
+    filter: brightness(150%);
+    cursor: pointer;
 }
 
 .svg {
-    margin-bottom: 39px;
 }
 
 .title {
@@ -46,7 +56,6 @@ body {
     font-size: xx-large;
     display: flex;
     justify-content: center;
-    margin-right: 150px;
 }
 
 /* Media Queries */
@@ -76,6 +85,10 @@ body {
         width: 48px;
         height: 48px;
     }
+
+    .container {
+        width: 90%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -93,5 +106,9 @@ body {
     .svg {
         width: 32px;
         height: 32px;
+    }
+
+    .container {
+        width: 90%;
     }
 }
