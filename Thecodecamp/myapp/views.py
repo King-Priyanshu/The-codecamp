@@ -2,10 +2,11 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_excempt
 
 from git import Repo
 
-
+@csrf_excempt
 def webhook (request):
     if request.method == 'POST':
         repo = Repo('.')
