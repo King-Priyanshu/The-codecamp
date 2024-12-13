@@ -22,9 +22,9 @@ header {
 footer {
     background-color: #0d1c30;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
+    height: 100px;
 }
 h1, h2, p {
     margin-bottom: 10px;
@@ -49,16 +49,24 @@ aside {
     box-sizing: border-box;
     transition: width 0.3s ease; /* Smooth transition */
     overflow:scroll;
-    height: 500px;
+    height: 470px;
 }
 textarea{
     height: 210px;
-    width: 384px;
+    width: 360px;
 }
 #iframecontainer{
     height: 210px;
-    width: 384px;
+    width: auto;
     background-color: rgb(31, 30, 30)
+}
+
+#iframe {
+    height: 200px;
+    width: 360px;
+    color: aliceblue;
+    background-color: rgb(31, 30, 30);
+    margin-bottom:10px ;
 }
 
 .hover-button {
@@ -100,7 +108,6 @@ textarea{
     border-radius: 5px;
     width: 95%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 473px;
     overflow: scroll;
 }
 .interp{
@@ -204,21 +211,19 @@ textarea{
     height:auto;
     margin-bottom: 100px;
  }
- textarea{
-    height: 200px;
-    width: 350px;
-}
-#iframecontainer{
-    height: 200px;
-    width: 350px;
-    background-color: rgb(31, 30, 30);
-   
-    
-}
+
 footer {
-    margin-bottom: 20px;
 
+}
 
+textarea, #iframe {
+    width: 440px;
 }
   
+}
+
+@media screen and (max-width: 400px) {
+    textarea, #iframe {
+        width: 260px;
+    }
 }
